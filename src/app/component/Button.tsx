@@ -25,7 +25,7 @@ export default function Button({ label, url, external }: ButtonProps) {
   }
 
   return (
-    <Link href={url} className="bg-[#243662] text-white font-semibold py-2 px-4 rounded">
+    <Link href={url} className="bg-[#243662] text-white font-semibold py-2 px-4 rounded w-min">
       {label}
     </Link>
   );
