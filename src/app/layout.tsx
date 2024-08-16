@@ -1,5 +1,6 @@
 import "@/ui/globals.css";
 import NavBar from "./component/Navbar";
+import { amiko, amita } from "@/app/fonts";
 
 export default function RootLayout({
   children,
@@ -7,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={amiko.className}>
       <body>
         <NavBar></NavBar>
         {children}

@@ -6,20 +6,21 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex flex-col items-center min-h-screen gap-[250px]">
-      <div className="absolute -z-10">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <Image
           src="/IMG_3667.jpg"
           alt="image de l'appartement"
           width={1920}
           height={1080}
-          className="object-cover"
+          className="object-cover w-full h-full filter brightness-50 blur-sm scale-110"
         />
       </div>
+
       <div className="mt-24 flex flex-col items-center">
-        <h1 className={`${amita.className} text-7xl mb-12 text-white`}>
+        <h1 className={`${amita.className} text-[64px] mb-12 text-white`}>
           - Studio Mazzetta -
         </h1>
-        <p>Le studio pour un été inoubliable en corse</p>
+        <p className="text-white">Le studio pour un été inoubliable en corse</p>
       </div>
       <div className="h-96"></div>
       <div className="h-96"></div>
