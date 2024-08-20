@@ -22,16 +22,16 @@ export default function CardLarge({
 }: CardProps) {
   return (
     <section
-      className={`w-[1225px] flex justify-between gap-[15px] ${
+      className={`w-[1225px]  flex justify-between gap-[15px] ${
         reverse ? "flex-row-reverse" : ""
       }`}
     >
-      <div className="w-[560px] h-[400px] bg-white rounded-xl shadow-md p-8 flex flex-col items-center">
+      <div className="w-[560px] h-[450px] bg-white rounded-xl shadow-md p-8 flex flex-col items-center">
         <h2 className="font-serif text-3xl mb-4 w-full">{title}</h2>
-        <p className="text-gray-600 mb-4 w-full h-full">{description}</p>
+        <p className="mb-4 w-full h-full leading-[15px] text-justify">{description}</p>
           <Button label={buttonLabel} url={buttonUrl} external={external} />
       </div>
-      <div className="w-[650px] h-[400px] rounded-xl overflow-hidden">
+      <div className="w-[650px] h-[450px] rounded-xl overflow-hidden">
         <Image
           src={imageUrl}
           alt={title}

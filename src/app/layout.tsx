@@ -1,6 +1,9 @@
+'use client'
+
 import "@/ui/globals.css";
 import NavBar from "./component/Navbar";
 import { amiko, amita } from "@/app/fonts";
+import Footer from "./component/Footer";
 
 export default function RootLayout({
   children,
@@ -9,9 +12,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={amiko.className}>
-      <body>
+      <body className={`${amiko.className}`}>
         <NavBar></NavBar>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );
