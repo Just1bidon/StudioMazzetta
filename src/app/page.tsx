@@ -2,10 +2,11 @@ import CardSmall from "./component/CardSmall";
 import CardLarge from "./component/CardLarge";
 import { amita } from "@/app/fonts";
 import Image from "next/image";
+import CardQuote from "./component/CardQuote";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center min-h-screen gap-[250px]">
+    <main className="flex flex-col items-center min-h-screen gap-[220px]">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <Image
           src="/IMG_3667.jpg"
@@ -80,7 +81,17 @@ Chaque lieu vous promet des découvertes inoubliables."
           reverse={false}
         />
       </div>
-      <div className="mb-48"></div>
+      <div className="bg-[#243662] w-full h-[550px] mb-[175px] flex items-center justify-center">
+        <CardQuote
+          title="Goncalves Amélie"
+          subtitle="Propriétaire"
+          quote="C’est le temps que tu as perdu pour ta rose qui fait ta rose si importante"
+          phone="06 22 54 32 81"
+          email="studio.mazzetta2a@gmail.com"
+          photoUrl="/Proprietaire.jpeg"
+          author="Le Petit Prince"
+        />
+      </div>
     </main>
   );
 }
