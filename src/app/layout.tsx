@@ -5,23 +5,7 @@ import NavBar from "./component/Navbar";
 import Footer from "./component/Footer";
 import localFont from "next/font/local";
 
-export const amita = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Amita/Amita-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Amita/Amita-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-amita",
-});
-
-export const amiko = localFont({
+const amiko = localFont({
   src: [
     {
       path: "../../public/fonts/Amiko/Amiko-Regular.ttf",
@@ -50,9 +34,9 @@ export default function RootLayout({
   return (
     <html lang="fr" className={amiko.className}>
       <body className={`${amiko.className}`}>
-        <NavBar></NavBar>
+        <NavBar />
         {children}
-        <Footer></Footer>
+        <Footer />
       </body>
     </html>
   );
