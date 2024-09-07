@@ -1,21 +1,6 @@
 import Image from "next/image";
-import localFont from "next/font/local";
+import { amiko, amita } from "../fonts";
 
-export const amita = localFont({
-  src: [
-    {
-      path: "../../../public/fonts/Amita/Amita-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../../public/fonts/Amita/Amita-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-amita",
-});
 type CardProps = {
   title: string;
   imageUrl: string;
@@ -35,7 +20,7 @@ export default function CardSmall({ title, imageUrl, description }: CardProps) {
           className="object-cover"
         />
       </div>
-      <p>{description}</p>
+      <p className={`${amiko.className}`}>{description}</p>
     </div>
   );
 }

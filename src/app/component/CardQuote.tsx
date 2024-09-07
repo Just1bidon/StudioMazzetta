@@ -1,30 +1,14 @@
 import Image from "next/image";
-import localFont from "next/font/local";
-
-export const amita = localFont({
-  src: [
-    {
-      path: "../../../public/fonts/Amita/Amita-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../../public/fonts/Amita/Amita-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-amita",
-});
+import { amita } from "../fonts";
 
 type CardProps = {
   title: string;
   subtitle: string;
   quote: string;
   author?: string;
-  phone: string;
-  email: string;
-  photoUrl: string;
+  phone?: string;
+  email?: string;
+  photoUrl?: string;
 };
 
 export default function CardQuote({
@@ -37,11 +21,11 @@ export default function CardQuote({
   author,
 }: CardProps) {
   return (
-    <div className="w-[1225px] bg-white p-[20px] rounded-lg shadow-md flex justify-center items-center gap-36">
-      <div className="flex-shrink-0 flex flex-col justify-between">
+    <div className="w-[1225px] bg-white py-[30px] px-[100px] rounded-lg shadow-md flex justify-center items-center gap-36">
+      <div className={`flex-shrink-0 flex flex-col justify-between ${photoUrl ? "w-3/7" : "w-full"}`}>
         <h2 className={`${amita.className} text-3xl mb-1`}>{title}</h2>
         <h3 className="text-[#243662] italic mb-8">{subtitle}</h3>
-        <div className="flex w-min h-min relative">
+        <div className="flex h-min relative">
           <div className="w-[50px]">
             <Image
               src="/Guillemet.png"
@@ -51,7 +35,7 @@ export default function CardQuote({
               className="w-[50px] h-[50px]"
             />
           </div>
-          <p className="w-[467px] px-5 my-10">{quote}</p>
+          <p className={`${photoUrl ? "w-[467px]" : "w-full"} px-5 my-6 text-justify`}>{quote}</p>
           {author && (
             <p className="absolute bottom-0 right-[75px] text-right text-sm italic text-gray-900">
               - {author} -
@@ -67,36 +51,44 @@ export default function CardQuote({
             />
           </div>
         </div>
-        <div className="mt-6 w-min">
-          <div className="flex items-center mb-2">
-            <Image
-              src="/icons/phone.svg"
-              alt="phone-icon"
-              width={20}
-              height={20}
-            />
-            <span className="ml-2">{phone}</span>
+        {(phone || email) && (
+          <div className="mt-6 w-min">
+            {phone && (
+              <div className="flex items-center mb-2">
+                <Image
+                  src="/icons/phone.svg"
+                  alt="phone-icon"
+                  width={20}
+                  height={20}
+                />
+                <span className="ml-2">{phone}</span>
+              </div>
+            )}
+            {email && (
+              <div className="flex items-center">
+                <Image
+                  src="/icons/email.svg"
+                  alt="email-icon"
+                  width={20}
+                  height={20}
+                />
+                <span className="ml-2">{email}</span>
+              </div>
+            )}
           </div>
-          <div className="flex items-center">
-            <Image
-              src="/icons/email.svg"
-              alt="email-icon"
-              width={20}
-              height={20}
-            />
-            <span className="ml-2">{email}</span>
-          </div>
+        )}
+      </div>
+      {photoUrl && (
+        <div className="w-[312px] h-[400px] flex-shrink-0">
+          <Image
+            src={photoUrl}
+            alt="profile photo"
+            width={312}
+            height={400}
+            className="object-cover rounded-lg"
+          />
         </div>
-      </div>
-      <div className="w-[312px] h-[400px] flex-shrink-0">
-        <Image
-          src={photoUrl}
-          alt="profile photo"
-          width={312}
-          height={400}
-          className="object-cover rounded-lg"
-        />
-      </div>
+      )}
     </div>
   );
 }

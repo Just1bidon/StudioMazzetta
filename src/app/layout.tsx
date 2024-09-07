@@ -1,30 +1,9 @@
-"use client";
+'use client'
 
 import "@/ui/globals.css";
 import NavBar from "./component/Navbar";
+import { amiko, amita } from "@/app/fonts";
 import Footer from "./component/Footer";
-import localFont from "next/font/local";
-
-const amiko = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Amiko/Amiko-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Amiko/Amiko-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Amiko/Amiko-SemiBold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-  ],
-  variable: "--font-amiko",
-});
 
 export default function RootLayout({
   children,
@@ -34,9 +13,9 @@ export default function RootLayout({
   return (
     <html lang="fr" className={amiko.className}>
       <body className={`${amiko.className}`}>
-        <NavBar />
+        <NavBar></NavBar>
         {children}
-        <Footer />
+        <Footer></Footer>
       </body>
     </html>
   );

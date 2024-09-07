@@ -1,31 +1,15 @@
 import CardSmall from "./component/CardSmall";
 import CardLarge from "./component/CardLarge";
+import { amita } from "@/app/fonts";
 import Image from "next/image";
 import CardQuote from "./component/CardQuote";
-import localFont from "next/font/local";
-
-export const amita = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Amita/Amita-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Amita/Amita-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-amita",
-});
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center min-h-screen gap-[220px]">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <Image
-          src="/IMG_3667.jpg"
+          src="/IMG_appart/IMG_3667.jpg"
           alt="image de l'appartement"
           width={1920}
           height={1080}
@@ -62,7 +46,7 @@ export default function Home() {
       <div className="w-[1225px] h-min flex flex-col justify-betwee items-center gap-[35px]">
         <CardLarge
           title="L’appartement"
-          imageUrl="/IMG_3664.jpg"
+          imageUrl="/IMG_appart/IMG_3664.jpg"
           description="Découvrez ce charmant studio de 32m², classé 3 étoiles, situé à seulement 1km du centre-ville de Porto-Vecchio. Construit en décembre 2021, il offre une vue magnifique sur la montagne. <br/>
 Le logement dispose d'une pièce à vivre lumineuse avec un canapé convertible de haute qualité, une cuisine ouverte entièrement équipée, et une salle de bain moderne avec cabine de douche et lave-linge. Vous pourrez également profiter d'une grande terrasse-loggia de 36m² aménagée avec une table, des chaises, un barbecue et des transats. <br/>
 Pour votre confort, le studio est équipé d'une connexion Wifi, d'une TV HD avec Netflix, d'une climatisation réversible, et d'un espace de travail dédié. Une place de stationnement est disponible dans un garage sécurisé. <br/>
@@ -97,7 +81,7 @@ Chaque lieu vous promet des découvertes inoubliables."
           reverse={false}
         />
       </div>
-      <div className="bg-[#243662] w-full h-[550px] mb-[175px] flex items-center justify-center">
+      <div className="bg-[#243662] w-full h-min py-[50px] mb-[175px] flex items-center justify-center">
         <CardQuote
           title="Goncalves Amélie"
           subtitle="Propriétaire"
