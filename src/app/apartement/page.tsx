@@ -6,55 +6,57 @@ import { amita } from "../fonts";
 import CardQuote from "../component/CardQuote";
 import EquipmentCard from "../component/CardEquipement";
 import CardInfos from "../component/CardInfos+Photos";
+import CheckItem from "../component/CheckItem";
+import Button from "../component/Button";
 
 export default function Home() {
   // definition des variables
   const equipmentList = [
     {
       title: "WIFI",
-      iconUrl: "/email.svg", // Remplacer par l'icône correcte
+      iconUrl: "/icons/wifi-svgrepo-com.svg", // Icône Wi-Fi
       description: "Vitesse du réseau wifi : 12 Mbps",
       subDescription: "(Vérifié par un test de débit)",
     },
     {
       title: "Sèche-cheveux",
-      iconUrl: "/email.svg", // Remplacer par l'icône correcte
+      iconUrl: "/icons/hair-dryer-dryer-svgrepo-com.svg", // Icône sèche-cheveux
       description: "Sèche-cheveux dans la salle de bain",
     },
     {
       title: "Lave-linge",
-      iconUrl: "/email.svg", // Remplacer par l'icône correcte
+      iconUrl: "/icons/laundry-svgrepo-com.svg", // Icône lave-linge
       description: "Lave-linge (Gratuit) dans le logement",
     },
     {
       title: "Parking",
-      iconUrl: "/email.svg", // Remplacer par l'icône correcte
+      iconUrl: "/icons/parking-svgrepo-com.svg", // Icône parking
       description: "Stationnement gratuit dans un garage sur place : 1 place",
     },
     {
       title: "Cuisine",
-      iconUrl: "/email.svg", // Remplacer par l'icône correcte
+      iconUrl: "/icons/meal-svgrepo-com.svg", // Icône cuisine
       description: "Réfrigérateur, congélateur, micro-ondes, et autre ...",
     },
     {
       title: "Climatisation",
-      iconUrl: "/email.svg", // Remplacer par l'icône correcte
+      iconUrl: "/icons/ice-svgrepo-com.svg", // Icône climatisation
       description: "Climatisation centrale dans tout l’appartement",
     },
     {
       title: "TV",
-      iconUrl: "/email.svg", // Remplacer par l'icône correcte
-      description: "TV HD avec Netflix et autres chaines",
+      iconUrl: "/icons/tv-svgrepo-com.svg", // Icône TV
+      description: "TV HD avec Netflix et autres chaînes",
     },
     {
       title: "Espace de travail",
-      iconUrl: "/email.svg", // Remplacer par l'icône correcte
+      iconUrl: "/icons/pc3-o-svgrepo-com.svg", // Icône espace de travail
       description: "Espace de travail dédié",
       subDescription: "(Dans un espace commun)",
     },
     {
       title: "Montagne",
-      iconUrl: "/email.svg", // Remplacer par l'icône correcte
+      iconUrl: "/icons/mountain-outdoor-landscape-svgrepo-com.svg", // Icône vue sur la montagne
       description: "Vue sur la montagne depuis la terrasse",
     },
   ];
@@ -76,9 +78,7 @@ export default function Home() {
     "/IMG_appart/IMG_3676.jpg",
   ];
 
-  const salleDeBainPhotos = [
-    "/IMG_appart/IMG_3691.jpg",
-  ];
+  const salleDeBainPhotos = ["/IMG_appart/IMG_3691.jpg"];
 
   const exterieurPhotos = [
     "/IMG_appart/IMG_4196.jpg",
@@ -89,11 +89,46 @@ export default function Home() {
     "/IMG_appart/IMG_4199.jpg",
   ];
 
-  const espaceChambrePhotos = ["/IMG_appart/IMG_3686.jpg", "/IMG_appart/IMG_3686.jpg"];
+  const espaceChambrePhotos = [
+    "/IMG_appart/IMG_3686.jpg",
+    "/IMG_appart/IMG_3686.jpg",
+  ];
 
+  const items = [
+    <>
+      Capacités maximales de <strong>2 personnes</strong>.
+    </>,
+    <>
+      <strong>Forfait ménage</strong> obligatoire de 50€, à régler en espèce le
+      jour de votre arrivée.
+    </>,
+    <>
+      <strong>Véhicule</strong> recommandé, mais possibilité de rayonner à pied
+      ou en <strong>navette</strong> électrique et <strong>gratuite</strong>{" "}
+      dans le cœur de ville de <strong>Porto-Vecchio</strong>, le port de
+      plaisance et la partie basse de la ville.
+    </>,
+    <>
+      À votre disposition : étendoir à linge, aspirateur balai, glacière, pains
+      de glaces, défroisseur vapeur et cabas pour les courses.
+    </>,
+    <>
+      Prestations Incluses : <strong>linge de maison</strong> (draps, 1 grande +
+      1 petite serviette par personne, tapis de bain et torchons) et taxes de
+      séjour.
+    </>,
+    <>
+      Puis un <strong>sac de plage</strong> contenant 2 serviettes et un
+      parasol.
+    </>,
+    <>
+      Prestation Optionnelle : (sur pre-réservation à régler sur place 10€){" "}
+      <strong>2 masques Easybreath</strong>.
+    </>,
+  ];
 
   return (
-    <main className="flex flex-col items-center min-h-screen gap-[220px]">
+    <main className="flex flex-col items-center min-h-screen gap-[190px]">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <Image
           src="/IMG_appart/IMG_3666.jpg"
@@ -104,14 +139,14 @@ export default function Home() {
         />
       </div>
 
-      <div className="mt-64 mb-[130px] flex flex-col items-center">
+      <div className="mt-64 mb-[150px] flex flex-col items-center">
         <h1 className={`${amita.className} text-[64px] mb-2 text-white`}>
           - L’appartement -
         </h1>
         <p className="text-white">Studio Mazzetta</p>
       </div>
 
-      <div className="bg-[#243662] w-full h-min py-[50px] flex items-center justify-center -z-10">
+      <div className="bg-[#243662] w-full h-min py-[50px] flex items-center justify-center">
         <CardQuote
           title="Le Studio Mazzetta"
           subtitle="Le studio de vos vacances"
@@ -140,42 +175,74 @@ Avec un emplacement pratique à 2,2 km du port de commerce, 21 km de l'aéroport
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-[50px]">
+      <div className="flex flex-col items-center bg-white shadow-md w-[1225px] gap-[35px] py-[30px] rounded-[8px]">
         {/* Espace de vie */}
         <CardInfos
           title="Espace de vie"
           description="Climatisation - Chauffage - Livres et de quoi lire - Système audio - Télévision"
           photos={espaceDeViePhotos}
+          shouldHighlightFirstWord={true}
+          barHeight={130}
         />
-
+        <div className="w-[593px] h-[3px] bg-[#243662]"></div>
         {/* Cuisine */}
         <CardInfos
           title="Cuisine"
           description="Bouilloire électrique - Café - Cafetière - Congélateur - Équipements de cuisine de base - Four - Four à micro-ondes - Grille-pain - Lave-vaisselle - Plaques de cuisson - Réfrigérateur - Ustensiles de barbecue - Vaisselle et couverts - Verres à vin"
           photos={cuisinePhotos}
+          shouldHighlightFirstWord={false}
+          barHeight={200}
         />
+        <div className="w-[593px] h-[3px] bg-[#243662]"></div>
 
         {/* Salle de bain */}
         <CardInfos
           title="Salle de bain"
           description="Chauffage - Eau chaude - Sèche-cheveux"
           photos={salleDeBainPhotos}
+          shouldHighlightFirstWord={true}
+          barHeight={110}
         />
+        <div className="w-[593px] h-[3px] bg-[#243662]"></div>
 
         {/* Extérieur */}
         <CardInfos
           title="Extérieur"
           description="Barbecue - Chaises longues - Espace repas en plein air - Ustensiles de barbecue - Mobilier d'extérieur - Étendoir à linge"
           photos={exterieurPhotos}
+          shouldHighlightFirstWord={false}
+          barHeight={150}
         />
+        <div className="w-[593px] h-[3px] bg-[#243662]"></div>
 
         {/* Espace chambre */}
         <CardInfos
           title="Espace chambre"
           description="Canapé-lit - Chauffage - Climatisation - Draps"
           photos={espaceChambrePhotos}
+          shouldHighlightFirstWord={true}
+          barHeight={100}
         />
       </div>
+      <div>
+        <h2 className={`${amita.className} text-3xl mb-6`}>
+          Informations supplémentaires
+        </h2>
+        <div className="bg-white p-8 rounded-lg shadow-md max-w-[1225px] mx-auto">
+          {items.map((item, index) => (
+            <CheckItem key={index} text={item} />
+          ))}
+        </div>
+        <div className="h-16"></div>
+        <div className="w-full flex justify-center">
+          <Button
+            label="Réserver"
+            url="https://www.airbnb.fr/rooms/560810265883629716?source_impression_id=p3_1723829287_P3xgAxwBvVUbLd2Q"
+            external={true}
+          />
+        </div>
+      </div>
+      <div></div>
     </main>
   );
 }

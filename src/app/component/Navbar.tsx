@@ -4,7 +4,7 @@ import Button from "./Button";
 
 export default function NavBar() {
   return (
-    <section className="bg-white w-full h-[83px] flex justify-between items-center px-[40px] py-[20px] sticky top-0">
+    <section className="bg-white w-full h-[83px] flex justify-between items-center px-[40px] py-[20px] sticky top-0 z-50">
       <div className="w-[165px] h-[48px]">
         <Image src="/4.png" width={165} height={48} alt="logo de rate" />
       </div>
