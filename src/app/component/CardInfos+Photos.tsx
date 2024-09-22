@@ -7,7 +7,7 @@ type CardInfosProps = {
   description: string;
   photos: string[];
   shouldHighlightFirstWord: boolean;
-  barHeight?: number; // Ajoute une propriété optionnelle pour spécifier la hauteur
+  barHeight?: number;
 };
 
 export default function CardInfos({
@@ -15,7 +15,7 @@ export default function CardInfos({
   description,
   photos,
   shouldHighlightFirstWord,
-  barHeight, // Optionnel, si passé il écrasera la valeur par défaut
+  barHeight,
 }: CardInfosProps) {
   const words = title.split(" ");
   const contentRef = useRef<HTMLDivElement>(null); // Ref pour mesurer la hauteur
