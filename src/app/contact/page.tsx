@@ -5,7 +5,7 @@ import { amita } from "../fonts";
 export default function ContactPage() {
   return (
     <main className="flex flex-col items-center">
-      <div className="absolute right-0 -z-5 bg-[#F8F9FC] w-1/2 h-full">
+      <div className="hidden lg:block absolute bottom-[-50px] top-[-50px] lg:right-0 -z-10 bg-[#F8F9FC] lg:w-1/2 lg:h-[calc(100%-20px)]">
         <img
           src="/IMG_2275.JPG"
           alt="Fond de contact"
@@ -14,12 +14,12 @@ export default function ContactPage() {
       </div>
 
       {/* Fond blanc incliné */}
-      <div className="absolute -z-5 bg-[#F8F9FC] w-[150px] h-[1300px] rotate-12 left-1/2 transform -translate-x-1/2"></div>
+      <div className="absolute -z-5 bg-[#F8F9FC] w-[50px] lg:w-[200px] h-[1500px] lg:h-screen top-0 rotate-90 lg:rotate-3 left-[33%] azerty:left-[38%]"></div>
 
-      <div className="relative flex flex-col items-center py-16">
-        <div className="w-[1225px] max-w-6xl flex justify-center gap-[200px]">
+      <div className="relative flex flex-col items-center p-16">
+        <div className="w-full lg:w-[1225px] max-w-6xl lg:flex justify-center items-center gap-[40px] azerty:gap-[200px]">
           {/* Informations de contact */}
-          <div className="flex flex-col items-start space-y-6 text-[#243662] w-1/2">
+          <div className="flex flex-col items-start space-y-6 text-[#243662] w-full lg:w-1/2">
             <div>
               <h1 className={`${amita.className} text-4xl text-black mb-4`}>
                 Nous contacter
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 width={30}
                 height={30}
               />
-              <div className="">
+              <div>
                 <p className="text-[#243662] font-bold">E-mail</p>
                 <a
                   href="mailto:studio.mazzetta2a@gmail.com"
@@ -93,7 +93,15 @@ export default function ContactPage() {
           </div>
 
           {/* Formulaire de contact */}
-          <div className="bg-white shadow-lg rounded-lg p-8 w-1/3">
+          <div className="relative bg-white shadow-lg rounded-lg p-8 w-full lg:w-1/3 mt-40 lg:mt-0">
+            {/* Image de fond visible en dessous de 1024px */}
+            <div className="lg:hidden absolute top-[-50px] bottom-[-50px] left-1/2 transform -translate-x-1/2 -z-10 bg-[#F8F9FC] w-screen h-[calc(100%+100px)]">
+              <img
+                src="/IMG_2275.JPG"
+                alt="Fond de contact"
+                className="object-cover w-full h-full filter brightness-50 blur-sm scale-110"
+              />
+            </div>
             <form>
               <div className="mb-4">
                 <label className="block text-black text-sm font-bold mb-2">
@@ -139,7 +147,7 @@ export default function ContactPage() {
                 type="submit"
                 className="bg-[#243662] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-blue-800"
               >
-                Submit
+                Envoyer
               </button>
             </form>
           </div>

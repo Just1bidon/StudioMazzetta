@@ -3,18 +3,18 @@
   }
   
   .icon-insta {
-    fill: url(#paint0_radial_74_947); /* Couleur par défaut */
+    fill: url(#paint0_radial_74_947);
   }
   
   .icon-insta-hovered {
-    fill: url(#paint1_radial_74_947); /* Couleur lors du survol */
+    fill: url(#paint1_radial_74_947);
   }
   
   .icon-airbnb {
-    fill: #FF5A5F; /* Couleur par défaut pour Airbnb */
+    fill: #FF5A5F;
   }
   
   .icon-airbnb-hovered {
-    fill: #FF385C; /* Couleur lors du survol pour Airbnb */
+    fill: #FF385C;
   }
   
