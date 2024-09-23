@@ -71,7 +71,7 @@ Découvrez également les magnifiques plages de Santa Giulia et Palombaggia, ré
         <div className="w-[80px] h-[4px] bg-[#243662]"></div>
         <CardLarge
           title="Les paysages"
-          imageUrl="/image00056.jpeg"
+          imageUrl="/IMG_landscape/image00056.jpeg"
           description="Découvrez les merveilles de la région autour de Porto-Vecchio. Commencez par Bonifacio, connue pour ses falaises de calcaire blanc et ses vues spectaculaires sur la Méditerranée. Ensuite, explorez le Lion de Roccapina, une formation rocheuse unique en forme de lion couché. Pour une escapade en montagne, rendez-vous à Ospedale avec ses forêts de pins et son lac enchanteur.
 Le plateau du Cuscionu offre des prairies verdoyantes et des panoramas à couper le souffle. Porto-Vecchio elle-même séduit par ses plages de sable fin et son centre-ville animé. Enfin, ne manquez pas Saint-Lucie de      Porto-Vecchio, avec ses plages idylliques comme Pinarellu.
 Chaque lieu vous promet des découvertes inoubliables."
