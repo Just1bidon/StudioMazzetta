@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import NavBar from "@/app/component/Navbar";
 import { amita } from "../fonts";
 import CardQuote from "../component/CardQuote";
 import EquipmentCard from "../component/CardEquipement";

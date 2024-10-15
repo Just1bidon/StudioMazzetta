@@ -1,5 +1,3 @@
-import Image from "next/image";
-import NavBar from "@/app/component/Navbar";
 import { amita } from "../fonts";
 
 export default function ContactPage() {

@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
   const isContactPage = pathname === '/contact';
-  const footerValor = !isContactPage; // true sur toutes les pages sauf contact
+  const footerValor = !isContactPage;
 
   return (
     <html lang="fr" className={amiko.className}>
