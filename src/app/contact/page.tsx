@@ -5,7 +5,7 @@ export default function ContactPage() {
     <main className="flex flex-col items-center">
       <div className="hidden lg:block absolute bottom-[-50px] top-[-50px] lg:right-0 -z-10 bg-[#F8F9FC] lg:w-1/2 lg:h-[calc(100%-20px)] transition-all duration-500 ease-in-out">
         <img
-          src="/IMG_landscape/IMG_2275.JPG"
+          src="/IMG_landscape/Porto-Vecchio/PortoVecchio10.JPG"
           alt="Fond de contact"
           className="object-cover w-full h-full filter brightness-50 blur-sm scale-110 transition-all duration-500 ease-in-out"
         />

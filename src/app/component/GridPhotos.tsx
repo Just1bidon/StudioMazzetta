@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Carousel from "./Carousel"; // Assure-toi que le chemin est correct
+import Carousel from "./Carousel";
 
 type GridPhotosProps = {
   photos: string[];

@@ -1,6 +1,33 @@
 import Image from "next/image";
 import { amita } from "../fonts";
 import LocationCard from "../component/LocationCard";
+import LocationDetail from "../component/LocationDetails";
+
+const locations = [
+  {
+    title: "Porto-Vecchio",
+    description:
+      'Porto-Vecchio, surnommée la "Cité du Sel", est une destination incontournable en Corse.',
+    photos: [
+      "/images/porto1.jpg",
+      "/images/porto2.jpg",
+      "/images/porto3.jpg",
+      // Ajoute plus de photos ici
+    ],
+  },
+  {
+    title: "Bonifacio",
+    description:
+      "Bonifacio est une cité perchée au sommet de falaises spectaculaires.",
+    photos: [
+      "/images/bonifacio1.jpg",
+      "/images/bonifacio2.jpg",
+      "/images/bonifacio3.jpg",
+      // Ajoute plus de photos ici
+    ],
+  },
+  // Ajoute d'autres locations ici
+];
 
 export default function Home() {
   return (
@@ -59,6 +86,21 @@ export default function Home() {
             description="Une formation rocheuse en forme de lion offrant des vues spectaculaires."
             imagePath="/IMG_landscape/RoccapinaSansBg.png"
           />
+        </div>
+      </div>
+      <div className="container mx-auto py-10">
+        <h1 className="text-4xl font-bold mb-8 text-center">
+          Les lieux incontournables
+        </h1>
+        <div className="grid grid-cols-2 gap-12">
+          {locations.map((location, index) => (
+            <LocationDetail
+              key={index}
+              title={location.title}
+              description={location.description}
+              photos={location.photos}
+            />
+          ))}
         </div>
       </div>
     </main>
