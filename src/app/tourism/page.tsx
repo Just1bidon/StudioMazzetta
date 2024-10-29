@@ -113,7 +113,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="bg-white min-h-screen py-12">
+      <div className="bg-white w-full max-w-[1350px] min-h-screen py-12 mt-[200px]">
         <h1 className="text-4xl font-extrabold text-center mb-16 text-gray-800">
           Les lieux incontournables
         </h1>
