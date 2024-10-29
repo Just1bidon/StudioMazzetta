@@ -17,7 +17,6 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
   const closeCarousel = () => setShowCarousel(false);
 
   if (photos.length === 1) {
-    // Disposition pour une seule photo
     return (
       <>
         <div
@@ -37,7 +36,6 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
   }
 
   if (photos.length === 2) {
-    // Disposition pour deux photos
     return (
       <>
         <div className="grid grid-cols-2 gap-[10px] w-[620px]">
@@ -62,7 +60,6 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
   }
 
   if (photos.length === 3) {
-    // Disposition pour trois photos
     return (
       <>
         <div className="grid grid-cols-2 gap-[10px] w-[620px]">
@@ -95,7 +92,6 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
     );
   }
 
-  // Disposition pour plus de trois photos
   return (
     <>
       <div className="grid grid-cols-2 gap-[10px] w-[620px]">
