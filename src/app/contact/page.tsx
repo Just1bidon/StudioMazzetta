@@ -1,13 +1,15 @@
 import { amita } from "../fonts";
+import Image from 'next/image';
 
 export default function ContactPage() {
   return (
     <main className="flex flex-col items-center">
       <div className="hidden lg:block absolute bottom-[-50px] top-[-50px] lg:right-0 -z-10 bg-[#F8F9FC] lg:w-1/2 lg:h-[calc(100%-20px)] transition-all duration-500 ease-in-out">
-        <img
+        <Image
           src="/IMG_landscape/Porto-Vecchio/PortoVecchio10.JPG"
           alt="Fond de contact"
-          className="object-cover w-full h-full filter brightness-50 blur-sm scale-110 transition-all duration-500 ease-in-out"
+          layout="fill"
+          className="object-cover filter brightness-50 blur-sm scale-110 transition-all duration-500 ease-in-out"
         />
       </div>
 
@@ -39,7 +41,7 @@ export default function ContactPage() {
 
             {/* Email */}
             <div className="flex items-center space-x-4 transition-all duration-500 ease-in-out">
-              <img
+              <Image
                 src="/icons/email.svg"
                 alt="Email Icon"
                 width={30}
@@ -62,7 +64,7 @@ export default function ContactPage() {
 
             {/* Téléphone */}
             <div className="flex items-center space-x-4 transition-all duration-500 ease-in-out">
-              <img
+              <Image
                 src="/icons/phone.svg"
                 alt="Phone Icon"
                 width={30}
@@ -85,7 +87,7 @@ export default function ContactPage() {
 
             {/* Réservation */}
             <div className="flex items-center space-x-4 transition-all duration-500 ease-in-out">
-              <img
+              <Image
                 src="/Icons_AirBnb.svg"
                 alt="Reservation Icon"
                 width={30}
@@ -111,10 +113,12 @@ export default function ContactPage() {
           <div className="relative bg-white shadow-lg rounded-lg p-8 w-full lg:w-1/3 mt-40 lg:mt-0 transition-all duration-500 ease-in-out">
             {/* Image de fond visible en dessous de 1024px */}
             <div className="lg:hidden absolute top-[-50px] bottom-[-50px] left-1/2 transform -translate-x-1/2 -z-10 bg-[#F8F9FC] w-screen h-[calc(100%+100px)] transition-all duration-500 ease-in-out">
-              <img
-                src="/IMG_2275.JPG"
+              <Image
+                src="/IMG_landscape/Porto-Vecchio/PortoVecchio10.JPG"
                 alt="Fond de contact"
-                className="object-cover w-full h-full filter brightness-50 blur-sm scale-110 transition-all duration-500 ease-in-out"
+                layout="fill"
+                objectFit="cover"
+                className="filter brightness-50 blur-sm scale-110 transition-all duration-500 ease-in-out"
               />
             </div>
             <form>

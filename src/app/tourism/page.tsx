@@ -1,29 +1,54 @@
 import Image from "next/image";
 import { amita } from "../fonts";
 import LocationCard from "../component/LocationCard";
-import LocationDetail from "../component/LocationDetails";
+import LocationDetails from "../component/LocationDetails";
 
-const locations = [
+const locations: { title: string; description: string; photos: string[] }[] = [
   {
     title: "Porto-Vecchio",
-    description:
-      'Porto-Vecchio, surnommée la "Cité du Sel", est une destination incontournable en Corse.',
+    description: `Porto-Vecchio, surnommée la "Cité du Sel" en raison de ses marais salants historiques, est une destination touristique incontournable en Corse du Sud. Cette ville allie à merveille tradition et modernité, avec son centre historique pittoresque et ses infrastructures touristiques modernes.
+La vieille ville, perchée sur une colline, est un labyrinthe de ruelles étroites bordées de maisons en pierre, de boutiques artisanales et de cafés animés. Les fortifications génoises offrent des vues panoramiques spectaculaires sur la baie et les montagnes environnantes.
+Porto-Vecchio est également renommée pour ses plages paradisiaques, comme Santa Giulia et Palombaggia, qui figurent parmi les plus belles de la Méditerranée. Le port de plaisance, animé de jour comme de nuit, est le point de départ idéal pour des excursions en bateau vers les îles Lavezzi et d'autres sites côtiers magnifiques.`,
     photos: [
-      "/images/porto1.jpg",
-      "/images/porto2.jpg",
-      "/images/porto3.jpg",
-      // Ajoute plus de photos ici
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio1.jpeg",
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio2.jpeg",
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio3.jpeg",
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio4.jpeg",
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio5.jpeg",
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio6.jpeg",
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio7.jpeg",
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio8.jpeg",
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio9.jpg",
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio10.JPG",
+      "/IMG_landscape/Porto-Vecchio/PortoVecchio11.JPG",
     ],
   },
   {
     title: "Bonifacio",
-    description:
-      "Bonifacio est une cité perchée au sommet de falaises spectaculaires.",
+    description: `Perchée sur des falaises de calcaire blanc, Bonifacio est l'une des villes les plus spectaculaires de Corse. Sa citadelle médiévale, avec ses remparts imposants et ses ruelles étroites, semble flotter au-dessus de la mer Méditerranée.
+En vous promenant dans la vieille ville, vous découvrirez des églises historiques, des maisons anciennes et des points de vue époustouflants sur les falaises et les eaux turquoise en contrebas. Le port de Bonifacio, situé dans une profonde crique naturelle, est un lieu animé où les yachts de luxe côtoient les bateaux de pêche traditionnels.
+Depuis le port, vous pouvez partir en excursion vers les grottes marines et les falaises, qui offrent des paysages à couper le souffle. Bonifacio est également un point de départ idéal pour explorer les îles Lavezzi, un archipel de petites îles granitiques aux plages idylliques et aux eaux cristallines.
+Avec son patrimoine historique riche et ses paysages naturels époustouflants, Bonifacio est une destination incontournable pour les voyageurs en Corse.`,
     photos: [
-      "/images/bonifacio1.jpg",
-      "/images/bonifacio2.jpg",
-      "/images/bonifacio3.jpg",
-      // Ajoute plus de photos ici
+      "/IMG_landscape/Bonifacio/Bonifacio1.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio2.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio3.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio4.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio5.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio6.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio7.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio8.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio9.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio10.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio11.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio12.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio13.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio14.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio15.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio16.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio17.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio18.jpeg",
+      "/IMG_landscape/Bonifacio/Bonifacio19.jpeg",
     ],
   },
   // Ajoute d'autres locations ici
@@ -34,7 +59,7 @@ export default function Home() {
     <main className="min-h-screen">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <Image
-          src="/IMG_landscape/image00056.jpeg"
+          src="/IMG_landscape/Porto-Vecchio/PortoVecchio6.jpeg"
           alt="image de l'appartement"
           width={1920}
           height={1080}
@@ -88,13 +113,13 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="container mx-auto py-10">
-        <h1 className="text-4xl font-bold mb-8 text-center">
+      <div className="bg-white min-h-screen py-12">
+        <h1 className="text-4xl font-extrabold text-center mb-16 text-gray-800">
           Les lieux incontournables
         </h1>
-        <div className="grid grid-cols-2 gap-12">
+        <div className="grid-cols-2">
           {locations.map((location, index) => (
-            <LocationDetail
+            <LocationDetails
               key={index}
               title={location.title}
               description={location.description}

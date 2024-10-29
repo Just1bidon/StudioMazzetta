@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 
 type CarouselProps = {
   photos: string[];
@@ -8,6 +9,18 @@ type CarouselProps = {
 
 export default function Carousel({ photos, currentIndex, closeCarousel }: CarouselProps) {
   const [index, setIndex] = useState(currentIndex);
+
+  const goToNext = useCallback(() => {
+    if (index < photos.length - 1) {
+      setIndex((prevIndex) => prevIndex + 1);
+    }
+  }, [index, photos.length]);
+
+  const goToPrev = useCallback(() => {
+    if (index > 0) {
+      setIndex((prevIndex) => prevIndex - 1);
+    }
+  }, [index]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -25,23 +38,11 @@ export default function Carousel({ photos, currentIndex, closeCarousel }: Carous
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [index]);
+  }, [closeCarousel, goToNext, goToPrev]);
 
   if (!photos || photos.length === 0) {
     return <div>Aucune image disponible.</div>;
   }
-
-  const goToNext = () => {
-    if (index < photos.length - 1) {
-      setIndex((prevIndex) => prevIndex + 1);
-    }
-  };
-
-  const goToPrev = () => {
-    if (index > 0) {
-      setIndex((prevIndex) => prevIndex - 1);
-    }
-  };
 
   return (
     <div className="fixed inset-0 bg-white bg-opacity-80 backdrop-blur-md flex justify-center items-center z-50">
@@ -53,13 +54,17 @@ export default function Carousel({ photos, currentIndex, closeCarousel }: Carous
         &times;
       </button>
 
-      {/* Image actuelle */}
-      <div className="relative w-4/5 max-w-5xl max-h-4/5 flex justify-center items-center">
-        <img
-          src={photos[index]}
-          alt={`Photo ${index + 1}`}
-          className="object-contain w-full h-auto"
-        />
+      {/* Image actuelle avec utilisation de la balise Image de Next.js */}
+      <div className="relative w-4/5 h-[70vh] max-w-5xl max-h-4/5 flex justify-center items-center">
+        <div className="relative w-full h-full">
+          <Image
+            src={photos[index]}
+            alt={`Photo ${index + 1}`}
+            layout="fill"
+            objectFit="contain"
+            className="rounded-lg"
+          />
+        </div>
       </div>
 
       {/* Flèche gauche - visible seulement si on n'est pas à la première image */}
