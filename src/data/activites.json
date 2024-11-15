@@ -1,0 +1,250 @@
+{
+  "activites": [
+    {
+      "nom": "Restaurant Da Rocca",
+      "categorie": "Restaurant",
+      "description": "Viande",
+      "urls": {
+        "instagram": "https://www.instagram.com/restaurant.darocca/"
+      },
+      "photo": "/IMG_activite/da_rocca.png"
+    },
+    {
+      "nom": "U Grill",
+      "categorie": "Restaurant",
+      "description": "Grillades",
+      "urls": {
+        "instagram": "https://www.instagram.com/u_grill_/"
+      },
+      "photo": "/IMG_activite/u_grill.png"
+    },
+    {
+      "nom": "Le Figuier",
+      "categorie": "Restaurant",
+      "description": "Cuisine méditerranéenne",
+      "urls": {
+        "instagram": "https://www.instagram.com/le_figuier_povo/",
+        "website": "https://figuier.42-9.menu/"
+      },
+      "photo": "/IMG_activite/le_figuier.png"
+    },
+    {
+      "nom": "Le restaurant les Amis",
+      "categorie": "Restaurant",
+      "description": "Pizzeria",
+      "urls": {
+        "instagram": "https://www.instagram.com/restaurant_les_amis/"
+      },
+      "photo": "/IMG_activite/restaurant_les_amis.png"
+    },
+    {
+      "nom": "Le Bellagio",
+      "categorie": "Restaurant",
+      "description": "Gastronomique",
+      "urls": {
+        "instagram": "https://www.instagram.com/le_bellagio_porto_vecchio/"
+      },
+      "photo": "/IMG_activite/le_bellagio.png"
+    },
+    {
+      "nom": "Le Relais",
+      "categorie": "Restaurant",
+      "description": "Cuisine traditionnelle",
+      "urls": {
+        "instagram": "https://www.instagram.com/lerelaissotta/"
+      },
+      "photo": "/IMG_activite/le_relais.jpg"
+    },
+    {
+      "nom": "U Paviddonu",
+      "categorie": "Restaurant",
+      "description": "Plats corses",
+      "urls": {
+        "instagram": "https://www.instagram.com/upaviddonu/"
+      },
+      "photo": "/IMG_activite/u_paviddonu.png"
+    },
+    {
+      "nom": "Café La Marine",
+      "categorie": "Café / Bar",
+      "description": "Café avec vue",
+      "urls": {
+        "instagram": "https://www.instagram.com/cafelamarineofficiel/",
+        "website": "https://www.whatiseat.com/fr/menu/cafe-la-marine/"
+      },
+      "photo": "/IMG_activite/cafe_la_marine.png"
+    },
+    {
+      "nom": "Bar à Vin",
+      "categorie": "Café / Bar",
+      "description": "Dégustation de vins",
+      "urls": {
+        "instagram": "https://www.instagram.com/lebaravin.chezjc/",
+        "facebook": "https://www.facebook.com/people/Le-Bar-%C3%A0-Vin-chez-JChri/100070893669421/"
+      },
+      "photo": "/IMG_activite/bar_a_vin.png"
+    },
+    {
+      "nom": "À Muschera",
+      "categorie": "Café / Bar",
+      "description": "Bar à vin, produits corses",
+      "urls": {
+        "instagram": "https://www.instagram.com/a_muschera_bav/",
+        "website": "https://a-muschera.business.site/"
+      },
+      "photo": "/IMG_activite/a_muschera.png"
+    },
+    {
+      "nom": "Bars des Ducs",
+      "categorie": "Café / Bar",
+      "description": "Bar historique",
+      "urls": {
+        "instagram": "https://www.instagram.com/galeriedesducs/",
+        "website": "https://www.galeriedesducs.fr/"
+      },
+      "photo": "/IMG_activite/bars_des_ducs.png"
+    },
+    {
+      "nom": "Complexe Galaxy",
+      "categorie": "Cinéma",
+      "description": "Laser game et bowling",
+      "urls": {
+        "instagram": "https://www.instagram.com/complexegalaxy/",
+        "website": "https://complexe-galaxy.com/"
+      },
+      "photo": "/IMG_activite/complexe_galaxy.png"
+    },
+    {
+      "nom": "SPMB",
+      "categorie": "Croisière",
+      "description": "Promenades en mer",
+      "urls": {
+        "website": "https://www.spmbonifacio.com/"
+      },
+      "photo": "/IMG_activite/spmb.png"
+    },
+    {
+      "nom": "Croisières Exclusive",
+      "categorie": "Croisière",
+      "description": "Services de croisières privées",
+      "urls": {
+        "instagram": "https://www.instagram.com/croisiere_exclusive/",
+        "website": "https://croisiere-exclusive.fr/"
+      },
+      "photo": "/IMG_activite/croisieres_exclusive.png"
+    },
+    {
+      "nom": "Chiocca Croisières",
+      "categorie": "Croisière",
+      "description": "Découvertes maritimes",
+      "urls": {
+        "website": "https://www.amour-des-iles.com/croisiere-corse/"
+      },
+      "photo": "/IMG_activite/chiocca.png"
+    },
+    {
+      "nom": "Jet Loc",
+      "categorie": "Sensations",
+      "description": "Jet ski et activités nautiques",
+      "urls": {
+        "instagram": "https://www.instagram.com/jetlocsantagiulia/",
+        "website": "https://jetski-santa-giulia.fr/"
+      },
+      "photo": "/IMG_activite/jet_loc.png"
+    },
+    {
+      "nom": "Sensations Airlines",
+      "categorie": "Sensations",
+      "description": "Parachute ascensionnel",
+      "urls": {
+        "instagram": "https://www.instagram.com/sensationsairlines/",
+        "website": "https://www.sensationsairlines.com/"
+      },
+      "photo": "/IMG_activite/sensations_airlines.png"
+    },
+    {
+      "nom": "A Staffa",
+      "categorie": "Équitation",
+      "description": "Balades équestres à Santa Giulia",
+      "urls": {
+        "instagram": "https://www.instagram.com/equicompliceastaffa/",
+        "website": "https://www.equicompliceastaffa.com/"
+      },
+      "photo": "/IMG_activite/a_staffa.png"
+    },
+    {
+      "nom": "Ranch Villata",
+      "categorie": "Équitation",
+      "description": "Découverte équestre à Saint Cyprien",
+      "urls": {
+        "website": "https://www.ranchvillata.fr/"
+      },
+      "photo": "/IMG_activite/ranch_villata.png"
+    },
+    {
+      "nom": "Country Horse",
+      "categorie": "Équitation",
+      "description": "Centre équestre à Lecci",
+      "urls": {
+        "website": "https://www.country-horse.com/"
+      },
+      "photo": "/IMG_activite/country_horse.png"
+    },
+    {
+      "nom": "Écuries de l'Oso",
+      "categorie": "Équitation",
+      "description": "Randonnées à cheval près de Lecci",
+      "urls": {},
+      "photo": "/IMG_activite/ecuries_de_l_oso.png"
+    },
+    {
+      "nom": "Inès Cluset",
+      "categorie": "Snorkeling",
+      "description": "Randonnées palmées",
+      "urls": {
+        "instagram": "https://www.instagram.com/inescluze/"
+      },
+      "photo": "/IMG_activite/ines_cluset.png"
+    },
+    {
+      "nom": "Porto-Vecchio",
+      "categorie": "Office de Tourisme",
+      "description": "Portivechju",
+      "urls": {
+        "instagram": "https://www.instagram.com/portovecchiotourisme/",
+        "website": "https://www.portovecchio-tourisme.corsica/"
+      },
+      "photo": "/IMG_activite/porto_vecchio.png"
+    },
+    {
+      "nom": "Bonifacio",
+      "categorie": "Office de Tourisme",
+      "description": "Bunifaziu",
+      "urls": {
+        "instagram": "https://www.instagram.com/bonifaciotourisme/",
+        "website": "https://www.bonifacio.fr/"
+      },
+      "photo": "/IMG_activite/bonifacio.png"
+    },
+    {
+      "nom": "Saint-Lucie",
+      "categorie": "Office de Tourisme",
+      "description": "Santa Lucia",
+      "urls": {
+        "instagram": "https://www.instagram.com/zonzasantaluciatourisme/",
+        "website": "https://zonza-saintelucie.com/"
+      },
+      "photo": "/IMG_activite/saint_lucie.png"
+    },
+    {
+      "nom": "Lecci",
+      "categorie": "Office de Tourisme",
+      "description": "Lecci",
+      "urls": {
+        "instagram": "https://www.instagram.com/leccitourisme/",
+        "website": "http://www.lecci-sudcorse.com/"
+      },
+      "photo": "/IMG_activite/lecci.png"
+    }
+  ]
+}
