@@ -2,16 +2,54 @@ import Image from "next/image";
 import { amita } from "../fonts";
 import LocationCard from "../component/LocationCard";
 import activities from "../../data/activites.json";
+
+interface Activite {
+  categorie: string;
+  nom: string;
+  description: string;
+  photo: string;
+  urls?: {
+    instagram?: string;
+    facebook?: string;
+    website?: string;
+  };
+}
+
+interface ActivitesParCategorie {
+  [key: string]: Activite[];
+}
+
 import ActiviteCard from "../component/ActiviteCard";
 
 export default function Home() {
-  const activitesParCategorie: { [key: string]: typeof activities.activites } = activities.activites.reduce((acc: { [key: string]: typeof activities.activites }, activite) => {
-    if (!acc[activite.categorie]) {
-      acc[activite.categorie] = [];
-    }
-    acc[activite.categorie].push(activite);
-    return acc;
-  }, {});
+  const categoriesOrder = [
+    "Restaurant",
+    "Café / Bar",
+    "Cinéma",
+    "Croisière",
+    "Sensations",
+    "Équitation",
+    "Snorkeling",
+    "Office de Tourisme",
+  ];
+
+  // Grouper les activités par catégorie
+  const activitesParCategorie: ActivitesParCategorie =
+    activities.activites.reduce(
+      (acc: ActivitesParCategorie, activite: Activite) => {
+        if (!acc[activite.categorie]) {
+          acc[activite.categorie] = [];
+        }
+        acc[activite.categorie].push(activite);
+        return acc;
+      },
+      {}
+    );
+
+  // Ordonner les catégories selon l'ordre spécifié
+  const categoriesOrdonnees = categoriesOrder.filter(
+    (categorie: string) => activitesParCategorie[categorie]
+  );
 
   return (
     <main className="flex flex-col items-center min-h-screen">
@@ -60,7 +98,7 @@ export default function Home() {
           <LocationCard
             title="Plateau du Cuscione"
             isFavorite={false}
-            description="Des paysages vastes et des sentiers parfaits pour la randonnée et les amoureux de la nature."
+            description="Un vaste plateau avec des paysages à couper le souffle et des sentiers de randonnée."
             imagePath="/IMG_landscape/CuscionuSansBg.png"
           />
           <div className="h-[80px] w-[4px] bg-[#243662]"></div>
@@ -77,20 +115,32 @@ export default function Home() {
         <h1 className={`${amita.className} text-4xl text-center text-black`}>
           Les activités
         </h1>
-        {Object.keys(activitesParCategorie).map((categorie) => (
+        {categoriesOrdonnees.map((categorie: string) => (
           <div key={categorie} className="mt-12">
-            <h2 className={`${amita.className} text-2xl text-black mb-4`}>{categorie}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-              {activitesParCategorie[categorie].map((activite, index) => (
-                <ActiviteCard
-                  key={index}
-                  url={activite.photo}
-                  nom={activite.nom}
-                  description={activite.description}
-                  instagram={activite.urls?.instagram}
-                  facebook={activite.urls?.facebook}
-                  website={activite.urls?.website}
-                />
+            <div className="bg-[#243662] w-min p-2">
+              <h2 className={`${amita.className} text-2xl text-white whitespace-nowrap`}>
+                {categorie}
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 p-4">
+              {activitesParCategorie[categorie].map(
+                (activite: Activite, index: number) => (
+                  <ActiviteCard
+                    key={index}
+                    url={activite.photo}
+                    nom={activite.nom}
+                    description={activite.description}
+                    instagram={activite.urls?.instagram}
+                    facebook={activite.urls?.facebook}
+                    website={activite.urls?.website}
+                  />
+                )
+              )}
+              {/* Ajouter des éléments placeholder pour remplir la ligne si nécessaire */}
+              {Array.from({
+                length: 5 - (activitesParCategorie[categorie].length % 5),
+              }).map((_, i: number) => (
+                <div key={`placeholder-${i}`} className="h-0"></div>
               ))}
             </div>
           </div>
