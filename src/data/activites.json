@@ -70,7 +70,8 @@
       "description": "Café avec vue",
       "urls": {
         "instagram": "https://www.instagram.com/cafelamarineofficiel/",
-        "website": "https://www.whatiseat.com/fr/menu/cafe-la-marine/"
+        "website": "https://www.whatiseat.com/fr/menu/cafe-la-marine/",
+        "facebook": "https://www.facebook.com/cafelamarine/"
       },
       "photo": "/IMG_activite/cafe_la_marine.png"
     },
@@ -102,7 +103,7 @@
         "instagram": "https://www.instagram.com/galeriedesducs/",
         "website": "https://www.galeriedesducs.fr/"
       },
-      "photo": "/IMG_activite/bars_des_ducs.png"
+      "photo": "/IMG_activite/bar_des_ducs.png"
     },
     {
       "nom": "Complexe Galaxy",
@@ -119,7 +120,8 @@
       "categorie": "Croisière",
       "description": "Promenades en mer",
       "urls": {
-        "website": "https://www.spmbonifacio.com/"
+        "website": "https://www.spmbonifacio.com/",
+        "instagram": "https://www.instagram.com/spmb_bonifacio"
       },
       "photo": "/IMG_activite/spmb.png"
     },
@@ -138,7 +140,8 @@
       "categorie": "Croisière",
       "description": "Découvertes maritimes",
       "urls": {
-        "website": "https://www.amour-des-iles.com/croisiere-corse/"
+        "website": "https://www.amour-des-iles.com/croisiere-corse/",
+        "instagram": "https://www.instagram.com/chiocca_croisieres/"
       },
       "photo": "/IMG_activite/chiocca.png"
     },
@@ -177,7 +180,8 @@
       "categorie": "Équitation",
       "description": "Découverte équestre à Saint Cyprien",
       "urls": {
-        "website": "https://www.ranchvillata.fr/"
+        "website": "https://www.ranchvillata.fr/",
+        "instagram": "https://www.instagram.com/_ranchvillata_/"
       },
       "photo": "/IMG_activite/ranch_villata.png"
     },
@@ -186,7 +190,8 @@
       "categorie": "Équitation",
       "description": "Centre équestre à Lecci",
       "urls": {
-        "website": "https://www.country-horse.com/"
+        "website": "https://www.country-horse.com/",
+        "instagram": "https://www.instagram.com/country_horse_corse/"
       },
       "photo": "/IMG_activite/country_horse.png"
     },
@@ -194,7 +199,11 @@
       "nom": "Écuries de l'Oso",
       "categorie": "Équitation",
       "description": "Randonnées à cheval près de Lecci",
-      "urls": {},
+      "urls": {
+        "website": "https://www.les-ecuries-de-loso.fr",
+        "instagram": "https://www.instagram.com/explore/locations/241322186334054/les-cavaliers-des-ecuries-de-loso/?hl=fr",
+        "facebook": "https://www.facebook.com/lescavaliersdesecuriesdeloso"
+      },
       "photo": "/IMG_activite/ecuries_de_l_oso.png"
     },
     {
@@ -202,7 +211,8 @@
       "categorie": "Snorkeling",
       "description": "Randonnées palmées",
       "urls": {
-        "instagram": "https://www.instagram.com/inescluze/"
+        "instagram": "https://www.instagram.com/inescluze/",
+        "facebook":"https://www.facebook.com/ines.cluset/"
       },
       "photo": "/IMG_activite/ines_cluset.png"
     },
@@ -212,7 +222,8 @@
       "description": "Portivechju",
       "urls": {
         "instagram": "https://www.instagram.com/portovecchiotourisme/",
-        "website": "https://www.portovecchio-tourisme.corsica/"
+        "website": "https://www.portovecchio-tourisme.corsica/",
+        "facebook": "https://www.facebook.com/PORTOVECCHIO"
       },
       "photo": "/IMG_activite/porto_vecchio.png"
     },
@@ -222,7 +233,8 @@
       "description": "Bunifaziu",
       "urls": {
         "instagram": "https://www.instagram.com/bonifaciotourisme/",
-        "website": "https://www.bonifacio.fr/"
+        "website": "https://www.bonifacio.fr/",
+        "facebook": "https://www.facebook.com/bonifaciotourisme"
       },
       "photo": "/IMG_activite/bonifacio.png"
     },
@@ -232,7 +244,8 @@
       "description": "Santa Lucia",
       "urls": {
         "instagram": "https://www.instagram.com/zonzasantaluciatourisme/",
-        "website": "https://zonza-saintelucie.com/"
+        "website": "https://zonza-saintelucie.com/",
+        "facebook": "https://www.facebook.com/zonzasantaluciatourismecorse/?fref=ts"
       },
       "photo": "/IMG_activite/saint_lucie.png"
     },
@@ -241,8 +254,9 @@
       "categorie": "Office de Tourisme",
       "description": "Lecci",
       "urls": {
-        "instagram": "https://www.instagram.com/leccitourisme/",
-        "website": "http://www.lecci-sudcorse.com/"
+        "instagram": "https://www.instagram.com/lecci.tourisme/",
+        "website": "http://www.lecci-sudcorse.com/",
+        "facebook": "https://www.facebook.com/otlecci"
       },
       "photo": "/IMG_activite/lecci.png"
     }
