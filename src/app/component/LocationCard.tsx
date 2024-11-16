@@ -19,15 +19,15 @@ export default function LocationCard({
       <div className="p-6">
         <h2 className={`text-3xl mb-10 ${amita.className}`}>{title}</h2>
         {isFavorite && (
-          <div className="text-[#243662] text-[12px] absolute relative -mt-[36px] flex items-center italic">
+          <div className="text-[#243662] text-[12px] absolute -mt-[36px] flex items-center italic">
             <Image
-              src="/icons/heart.svg" // Utilisation de l'icône SVG
+              src="/icons/heart.svg"
               alt="Coup de coeur"
               width={13}
               height={13}
               className="w-[13px] h-[13px] text-[#243662] mr-[4px]"
             />
-            <span>Coup de coeur de l'hôte</span>
+            <span>Coup de coeur de l&apos;hôte</span>
           </div>
         )}
         <p className="text-gray-700">{description}</p>
