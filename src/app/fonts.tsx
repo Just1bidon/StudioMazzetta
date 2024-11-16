@@ -19,17 +19,17 @@ export const amita = localFont({
 export const amiko = localFont({
   src: [
     {
-      path: '../../public/fonts/amiko/Amiko-Regular.ttf',
+      path: '../../public/fonts/Amiko/Amiko-Regular.ttf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/amiko/Amiko-Bold.ttf',
+      path: '../../public/fonts/Amiko/Amiko-Bold.ttf',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/amiko/Amiko-SemiBold.ttf',
+      path: '../../public/fonts/Amiko/Amiko-SemiBold.ttf',
       weight: '600',
       style: 'normal',
     },
