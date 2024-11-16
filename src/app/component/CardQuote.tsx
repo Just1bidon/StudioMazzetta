@@ -21,38 +21,48 @@ export default function CardQuote({
   author,
 }: CardProps) {
   return (
-    <div className="w-[1225px] bg-white py-[30px] px-[100px] rounded-lg shadow-md flex justify-center items-center gap-36">
-      <div className={`flex-shrink-0 flex flex-col justify-between ${photoUrl ? "w-3/7" : "w-full"}`}>
+    <div className="w-min xl:w-[1225px] bg-white py-4 xl:py-[30px] px-4 md:px-[100px] lg:px-[30px] xl:px-[100px] rounded-lg shadow-md flex justify-center items-center md:gap-12 xl:gap-36">
+      <div
+        className={`flex flex-col justify-between ${
+          photoUrl ? "w-3/7" : "w-full"
+        }`}
+      >
+        {/* Title */}
         <h2 className={`${amita.className} text-3xl mb-1`}>{title}</h2>
-        <h3 className="text-[#243662] italic mb-8">{subtitle}</h3>
+        {/* Subtitle */}
+        <h3 className="text-[#243662] italic mb-3 xl:mb-8">{subtitle}</h3>
+        {/* Quote */}
         <div className="flex h-min relative">
-          <div className="w-[50px]">
-            <Image
-              src="/icons/Guillemet.png"
-              alt="quote-left"
-              width={50}
-              height={50}
-              className="w-[50px] h-[50px]"
-            />
-          </div>
-          <p className={`${photoUrl ? "w-[467px]" : "w-full"} px-5 my-6 text-justify`}>{quote}</p>
+          <Image
+            src="/icons/Guillemet.png"
+            alt="quote-left"
+            width={50}
+            height={50}
+            className="w-[40px] h-[40px] xl:w-[50px] xl:h-[50px]"
+          />
+          <p
+            className={`${
+              photoUrl ? "w-[300px] md:w-[467px]" : "w-full"
+            } px-2 md:px-5 my-6 text-justify`}
+          >
+            {quote}
+          </p>
           {author && (
             <p className="absolute bottom-0 right-[75px] text-right text-sm italic text-gray-900">
               - {author} -
             </p>
           )}
-          <div className="w-[50px] flex items-end">
             <Image
               src="/icons/Guillemet.png"
               alt="quote-right"
               width={50}
               height={50}
-              className="w-[50px] h-[50px] rotate-180 b-0"
+              className="w-[40px] h-[40px] xl:w-[50px] xl:h-[50px] rotate-180 mt-auto"
             />
-          </div>
         </div>
         {(phone || email) && (
           <div className="mt-6 w-min">
+            {/* Phone */}
             {phone && (
               <div className="flex items-center mb-2">
                 <Image
@@ -64,6 +74,7 @@ export default function CardQuote({
                 <span className="ml-2">{phone}</span>
               </div>
             )}
+            {/* Email */}
             {email && (
               <div className="flex items-center">
                 <Image
@@ -78,11 +89,12 @@ export default function CardQuote({
           </div>
         )}
       </div>
+      {/* Owner Profil Picture */}
       {photoUrl && (
-        <div className="w-[312px] h-[400px] flex-shrink-0">
+        <div className="max-lg:hidden w-[200px] xl:w-[312px] xl:h-[400px]">
           <Image
             src={photoUrl}
-            alt="profile photo"
+            alt="profil photo"
             width={312}
             height={400}
             className="object-cover rounded-lg"

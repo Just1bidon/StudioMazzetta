@@ -15,12 +15,11 @@ export default function Footer({ valor }: CardProps) {
 
   return (
     <section
-      className={`bg-white w-full ${
-        valor ? "h-[260px]" : "h-min"
-      } flex flex-col justify-content items-center px-[10px] py-[30px] gap-[30px] bottom-0 z-10`}
+      className={`bg-white w-full h-min flex flex-col justify-content items-center px-[10px] py-[30px] gap-[30px] bottom-0 z-10`}
     >
+      {/* Logo */}
       {valor && (
-        <div className="w-[300px] h-[77px]">
+        <div className="w-[250px] h-[60px] sm:w-[300px] sm:h-[77px]">
           <Image
             src="/Logo/4.png"
             width={300}
@@ -29,7 +28,9 @@ export default function Footer({ valor }: CardProps) {
           />
         </div>
       )}
-      <section className="flex gap-[20px] items-end">
+      {/* Social Media */}
+      <div className="flex gap-[20px] items-end">
+        {/* Instagram */}
         <div
           className="w-[25px] h-[25px] cursor-pointer"
           onMouseEnter={() => setIsInstaHovered(true)}
@@ -40,13 +41,16 @@ export default function Footer({ valor }: CardProps) {
         >
           <Image
             src={
-              isInstaHovered ? "/icons/Icons_Insta_Colors.svg" : "/icons/Icons_Insta.svg"
+              isInstaHovered
+                ? "/icons/Icons_Insta_Colors.svg"
+                : "/icons/Icons_Insta.svg"
             }
             width={25}
             height={25}
             alt="Lien vers le instagram du Studio Mazzetta"
           />
         </div>
+        {/* AirBnb */}
         <div
           className="w-[25px] h-[25px] cursor-pointer"
           onMouseEnter={() => setIsAirbnbHovered(true)}
@@ -59,15 +63,24 @@ export default function Footer({ valor }: CardProps) {
         >
           <Image
             src={
-              isAirbnbHovered ? "/icons/Icons_AirBnb_Color.svg" : "/icons/Icons_AirBnb.svg"
+              isAirbnbHovered
+                ? "/icons/Icons_AirBnb_Color.svg"
+                : "/icons/Icons_AirBnb.svg"
             }
             width={25}
             height={25}
             alt="Lien vers le Airbnb du Studio Mazzetta"
           />
         </div>
-      </section>
-      <p>Studio Mazzetta - Conception Goncalves Baptiste</p>
+      </div>
+      <p className="hidden sm:block">
+        Studio Mazzetta - Conception Goncalves Baptiste
+      </p>
+      <div className="sm:hidden flex flex-col items-center">
+        <p className="-mb-2">Studio Mazzetta</p>
+        <p className="-mb-2">-</p>
+        <p className="-mb-2">Conception Goncalves Baptiste</p>
+      </div>
     </section>
   );
 }
