@@ -88,7 +88,7 @@ export default function ContactPage() {
             {/* Réservation */}
             <div className="flex items-center space-x-4 transition-all duration-500 ease-in-out">
               <Image
-                src="/Icons_AirBnb.svg"
+                src="/icons/Icons_AirBnb.svg"
                 alt="Reservation Icon"
                 width={30}
                 height={30}

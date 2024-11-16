@@ -22,7 +22,7 @@ export default function Footer({ valor }: CardProps) {
       {valor && (
         <div className="w-[300px] h-[77px]">
           <Image
-            src="/4.png"
+            src="/Logo/4.png"
             width={300}
             height={77}
             alt="Logo du studio mazzetta"
@@ -40,7 +40,7 @@ export default function Footer({ valor }: CardProps) {
         >
           <Image
             src={
-              isInstaHovered ? "/Icons_Insta_Colors.svg" : "/Icons_Insta.svg"
+              isInstaHovered ? "/icons/Icons_Insta_Colors.svg" : "/icons/Icons_Insta.svg"
             }
             width={25}
             height={25}
@@ -59,7 +59,7 @@ export default function Footer({ valor }: CardProps) {
         >
           <Image
             src={
-              isAirbnbHovered ? "/Icons_AirBnb_Color.svg" : "/Icons_AirBnb.svg"
+              isAirbnbHovered ? "/icons/Icons_AirBnb_Color.svg" : "/icons/Icons_AirBnb.svg"
             }
             width={25}
             height={25}

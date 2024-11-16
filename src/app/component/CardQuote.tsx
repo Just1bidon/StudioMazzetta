@@ -28,7 +28,7 @@ export default function CardQuote({
         <div className="flex h-min relative">
           <div className="w-[50px]">
             <Image
-              src="/Guillemet.png"
+              src="/icons/Guillemet.png"
               alt="quote-left"
               width={50}
               height={50}
@@ -43,7 +43,7 @@ export default function CardQuote({
           )}
           <div className="w-[50px] flex items-end">
             <Image
-              src="/Guillemet.png"
+              src="/icons/Guillemet.png"
               alt="quote-right"
               width={50}
               height={50}
