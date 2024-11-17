@@ -136,7 +136,7 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
               className="w-[145px] h-[145px] flex items-center justify-center bg-[#243662] text-[#FFFFFF] text-[38px] font-medium cursor-pointer"
               onClick={() => openCarousel(3)}
             >
-              +{photos.length - (window.innerWidth < 768 ? 2 : 3)}
+              +{photos.length - (typeof window !== 'undefined' && window.innerWidth < 768 ? 2 : 3)}
             </div>
           </div>
         </div>
