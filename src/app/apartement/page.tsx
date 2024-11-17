@@ -138,8 +138,10 @@ export default function Home() {
         />
       </div>
 
-      <div className="mt-64 mb-[150px] flex flex-col items-center">
-        <h1 className={`${amita.className} text-[64px] mb-2 text-white`}>
+      <div className="mt-64 mb-10 sm:mb-48 flex flex-col items-center">
+        <h1
+          className={`${amita.className} text-[38px] sm:text-[64px] mb-8 sm:mb-2 text-white`}
+        >
           - L’appartement -
         </h1>
         <p className="text-white">Studio Mazzetta</p>
@@ -149,9 +151,8 @@ export default function Home() {
         <CardQuote
           title="Le Studio Mazzetta"
           subtitle="Le studio de vos vacances"
-          quote="Bienvenue dans notre charmant studio de 32m², classé 3 étoiles, idéalement situé à seulement 1 km du centre-ville de Porto-Vecchio.
-Construit en décembre 2021, ce logement moderne et climatisé offre tout le confort nécessaire pour un séjour agréable. Vous profiterez d'une vue imprenable sur les montagnes environnantes et serez à proximité des magnifiques plages de Santa Giulia et Palombaggia, accessibles en quelques minutes en voiture.
-Avec un emplacement pratique à 2,2 km du port de commerce, 21 km de l'aéroport de Figari et 27 km de Bonifacio, notre studio est le point de départ parfait pour explorer la beauté de la Corse."
+          quote={`Bienvenue dans notre charmant studio de 32m², classé 3 étoiles, idéalement situé à seulement 1 km du centre-ville de Porto-Vecchio.\nConstruit en décembre 2021, ce logement moderne et climatisé offre tout le confort nécessaire pour un séjour agréable. Vous profiterez d'une vue imprenable sur les montagnes environnantes et serez à proximité des magnifiques plages de Santa Giulia et Palombaggia, accessibles en quelques minutes en voiture.\nAvec un emplacement pratique à 2,2 km du port de commerce, 21 km de l'aéroport de Figari et 27 km de Bonifacio, notre studio est le point de départ parfait pour explorer la beauté de la Corse.`}
+          quote2={`Studio 32m², 3 étoiles, à 1 km du centre-ville de Porto-Vecchio 🏠✨\nConstruit en décembre 2021, ce logement moderne et climatisé offre une vue magnifique sur les montagnes 🌄.\nÀ quelques minutes en voiture des plages de Santa Giulia et Palombaggia 🏖️.`}
           // phone="06 22 54 32 81"
           // email="studio.mazzetta2a@gmail.com"
           // photoUrl="/Proprietaire.jpeg"
@@ -159,10 +160,10 @@ Avec un emplacement pratique à 2,2 km du port de commerce, 21 km de l'aéroport
         />
       </div>
       <div>
-        <p className={`${amita.className} text-[32px] mb-8 p-4`}>
+        <p className={`${amita.className} text-[26px] sm:text-[32px] mb-8 p-4`}>
           Equipement de l’appartement
         </p>
-        <div className="max-w-[1225px] flex flex-wrap justify-center gap-6">
+        <div className="w-full max-w-[1225px] flex max-sm:flex-col sm:flex-wrap sm:justify-center gap-6">
           {equipmentList.map((equipment, index) => (
             <EquipmentCard
               key={index}
@@ -170,6 +171,7 @@ Avec un emplacement pratique à 2,2 km du port de commerce, 21 km de l'aéroport
               iconUrl={equipment.iconUrl}
               description={equipment.description}
               subDescription={equipment.subDescription}
+              align={index % 2 === 0 ? 'left' : 'right'}
             />
           ))}
         </div>
