@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { amita } from "../fonts";
 import LocationCard from "../component/LocationCard";
+import LocationDetails from "../component/LocationDetails";
+import locationsData from "../../data/locations.json";
 import activities from "../../data/activites.json";
+import ActiviteCard from "../component/ActiviteCard";
 
 interface Activite {
   categorie: string;
@@ -18,8 +21,6 @@ interface Activite {
 interface ActivitesParCategorie {
   [key: string]: Activite[];
 }
-
-import ActiviteCard from "../component/ActiviteCard";
 
 export default function Home() {
   const categoriesOrder = [
@@ -71,7 +72,6 @@ export default function Home() {
           Les lieux et activités inoubliables du Studio Mazzetta
         </p>
       </div>
-
       <div className="w-screen overflow-scroll px-[200px]">
         <div className="flex space-x-[50px] items-center w-min">
           <LocationCard
@@ -98,7 +98,7 @@ export default function Home() {
           <LocationCard
             title="Plateau du Cuscione"
             isFavorite={false}
-            description="Un vaste plateau avec des paysages à couper le souffle et des sentiers de randonnée."
+            description="Des paysages vastes et des sentiers parfaits pour la randonnée et les amoureux de la nature."
             imagePath="/IMG_landscape/CuscionuSansBg.png"
           />
           <div className="h-[80px] w-[4px] bg-[#243662]"></div>
@@ -110,7 +110,21 @@ export default function Home() {
           />
         </div>
       </div>
-
+      <div className="bg-white w-full max-w-[1350px] min-h-screen py-16 mt-[200px]">
+        <h1 className={`${amita.className} text-4xl text-center text-black`}>
+          Les lieux incontournables
+        </h1>
+        <div className="grid grid-cols-2">
+          {locationsData.locations.map((location, index) => (
+            <LocationDetails
+              key={index}
+              title={location.title}
+              description={location.description}
+              photos={location.photos}
+            />
+          ))}
+        </div>
+      </div>
       <div className="w-full max-w-[1350px] min-h-screen py-16 mt-[200px]">
         <h1 className={`${amita.className} text-4xl text-center text-black`}>
           Les activités
