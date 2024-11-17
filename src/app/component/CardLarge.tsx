@@ -5,6 +5,7 @@ type CardProps = {
   title: string;
   imageUrl: string;
   description: string;
+  description2?: string;
   buttonLabel: string;
   buttonUrl: string;
   external?: boolean;
@@ -15,6 +16,7 @@ export default function CardLarge({
   title,
   imageUrl,
   description,
+  description2,
   buttonLabel,
   buttonUrl,
   external,
@@ -22,21 +24,25 @@ export default function CardLarge({
 }: CardProps) {
   return (
     <section
-      className={`w-[1225px]  flex justify-between gap-[15px] ${
-        reverse ? "flex-row-reverse" : ""
+      className={`overflow-hidden w-full xl:w-[1225px] h-min rounded-xl xl:rounded-none flex flex-col-reverse xl:flex-row justify-between items-center xl:gap-[15px] ${
+        reverse && "xl:flex-row-reverse"
       }`}
     >
-      <div className="w-[560px] h-[450px] bg-white rounded-xl shadow-md p-8 flex flex-col items-center">
+      {/* Texte */}
+      <div className="xl:w-[560px] h-full bg-white xl:rounded-xl xl:shadow-md p-4 md:p-8 flex flex-col items-center">
         <h2 className="font-serif text-3xl mb-4 w-full">{title}</h2>
-        <p className="mb-4 w-full h-full leading-[15px] text-justify">{description}</p>
-          <Button label={buttonLabel} url={buttonUrl} external={external} />
+        <p className="mb-4 leading-[20px] block md:hidden">{description2}</p>
+        <p className="mb-4 leading-[20px] hidden md:block">{description}</p>
+        <Button label={buttonLabel} url={buttonUrl} external={external} />
       </div>
-      <div className="w-[650px] h-[450px] rounded-xl overflow-hidden">
+      {/* Image */}
+      <div className="w-full xl:w-[650px] h-[400px] xl:h-full xl:rounded-xl overflow-hidden flex justify-center">
         <Image
           src={imageUrl}
           alt={title}
           width={650}
           height={400}
+          layout="responsive"
           className="object-cover"
         />
       </div>

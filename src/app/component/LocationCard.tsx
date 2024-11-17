@@ -5,6 +5,7 @@ type LocationCardProps = {
   title: string;
   isFavorite: boolean;
   description: string;
+  description2?: string;
   imagePath: string;
 };
 
@@ -12,14 +13,17 @@ export default function LocationCard({
   title,
   isFavorite,
   description,
+  description2,
   imagePath,
 }: LocationCardProps) {
   return (
-    <div className="w-[360px] h-[360px] bg-white rounded-lg shadow-lg overflow-hidden">
-      <div className="p-6">
-        <h2 className={`text-3xl mb-10 ${amita.className}`}>{title}</h2>
+    <div className="w-[200px] h-[200px] lg:w-[360px] lg:h-[360px] bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="p-2 lg:p-6">
+        <h2 className={`text-xl lg:text-3xl lg:mb-10 ${amita.className}`}>
+          {title}
+        </h2>
         {isFavorite && (
-          <div className="text-[#243662] text-[12px] absolute -mt-[36px] flex items-center italic">
+          <div className="text-[#243662] text-[12px] -mt-[36px] flex items-center italic max-lg:hidden">
             <Image
               src="/icons/heart.svg"
               alt="Coup de coeur"
@@ -30,14 +34,22 @@ export default function LocationCard({
             <span>Coup de coeur de l&apos;hôte</span>
           </div>
         )}
-        <p className="text-gray-700">{description}</p>
+        <p className="max-lg:hidden">{description}</p>
+        <p className="lg:hidden text-[12px]">{description2}</p>
       </div>
       <Image
         src={imagePath}
         alt={title}
         width={360}
-        height={180}
-        className="object-cover w-full -mt-[100px]"
+        height={360}
+        className="max-lg:hidden object-cover w-full -mt-[100px]"
+      />
+      <Image
+        src={imagePath}
+        alt={title}
+        width={200}
+        height={200}
+        className="lg:hidden object-cover w-full -mt-[45px]"
       />
     </div>
   );

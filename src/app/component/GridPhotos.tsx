@@ -20,7 +20,7 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
     return (
       <>
         <div
-          className="w-[620px] h-[305px] bg-cover bg-center cursor-pointer"
+          className="w-[305px] md:w-[620px] h-[305px] bg-cover bg-center cursor-pointer"
           style={{ backgroundImage: `url(${photos[0]})` }}
           onClick={() => openCarousel(0)}
         />
@@ -38,11 +38,11 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
   if (photos.length === 2) {
     return (
       <>
-        <div className="grid grid-cols-2 gap-[10px] w-[620px]">
+        <div className="grid max-md:grid-rows-2 md:grid-cols-2 gap-[10px] w-[300px] md:w-[620px]">
           {photos.map((photoUrl, index) => (
             <div
               key={index}
-              className="w-[305px] h-[305px] bg-cover bg-center cursor-pointer"
+              className="w-[300px] h-[145px] max-md:first:h-[150px] md:w-[305px] md:h-[305px] bg-cover bg-center cursor-pointer"
               style={{ backgroundImage: `url(${photoUrl})` }}
               onClick={() => openCarousel(index)}
             />
@@ -62,13 +62,13 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
   if (photos.length === 3) {
     return (
       <>
-        <div className="grid grid-cols-2 gap-[10px] w-[620px]">
+        <div className="grid grid-cols-2 gap-[10px] w-[300px] md:w-[620px] max-md:grid-cols-1">
           <div
-            className="w-[305px] h-[305px] bg-cover bg-center cursor-pointer"
+            className="max-md:hidden w-[305px] h-[305px] bg-cover bg-center cursor-pointer"
             style={{ backgroundImage: `url(${photos[0]})` }}
             onClick={() => openCarousel(0)}
           />
-          <div className="grid grid-rows-2 gap-[10px]">
+          <div className="grid grid-rows-2 gap-[10px] max-md:hidden">
             <div
               className="w-[300px] h-[145px] bg-cover bg-center cursor-pointer"
               style={{ backgroundImage: `url(${photos[1]})` }}
@@ -79,6 +79,26 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
               style={{ backgroundImage: `url(${photos[2]})` }}
               onClick={() => openCarousel(2)}
             />
+          </div>
+          <div className="grid grid-rows-2 gap-[10px] md:hidden">
+            <div
+              className="w-[300px] h-[145px] bg-cover bg-center cursor-pointer"
+              style={{ backgroundImage: `url(${photos[1]})` }}
+              onClick={() => openCarousel(1)}
+            />
+            <div className="grid grid-cols-2 gap-[10px] w-[300px]">
+              <div
+                className="w-[145px] h-[145px] bg-cover bg-center cursor-pointer"
+                style={{ backgroundImage: `url(${photos[2]})` }}
+                onClick={() => openCarousel(2)}
+              />
+              <div
+                className="w-[145px] h-[145px] flex items-center justify-center bg-[#243662] text-[#FFFFFF] text-[38px] font-medium cursor-pointer"
+                onClick={() => openCarousel(2)}
+              >
+                +{photos.length - 2}
+              </div>
+            </div>
           </div>
         </div>
         {showCarousel && (
@@ -94,9 +114,9 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-[10px] w-[620px]">
+      <div className="grid grid-cols-2 gap-[10px] w-[300px] md:w-[620px]">
         <div
-          className="w-[305px] h-[305px] bg-cover bg-center cursor-pointer"
+          className="max-md:hidden w-[305px] h-[305px] bg-cover bg-center cursor-pointer"
           style={{ backgroundImage: `url(${photos[0]})` }}
           onClick={() => openCarousel(0)}
         />
@@ -116,7 +136,7 @@ export default function GridPhotos({ photos }: GridPhotosProps) {
               className="w-[145px] h-[145px] flex items-center justify-center bg-[#243662] text-[#FFFFFF] text-[38px] font-medium cursor-pointer"
               onClick={() => openCarousel(3)}
             >
-              +{photos.length - 3}
+              +{photos.length - (window.innerWidth < 768 ? 2 : 3)}
             </div>
           </div>
         </div>

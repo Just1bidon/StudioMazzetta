@@ -11,6 +11,8 @@
     "vercel-build": "prisma generate && prisma migrate deploy && next build"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "lucide-react": "^0.460.0",
     "next": "14.2.5",
     "prisma": "^5.19.1",
     "react": "^18.3.1",
