@@ -64,7 +64,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="mt-64 mb-10 sm:mb-48 flex flex-col items-center">
+      <div className="mt-64 mb-10 flex flex-col items-center">
         <h1
           className={`${amita.className} text-[38px] sm:text-[64px] mb-8 sm:mb-2 text-white`}
         >
@@ -122,17 +122,19 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="bg-white w-full max-w-[1350px] min-h-screen py-16 mt-[200px]">
-        <h1 className={`${amita.className} text-4xl text-center text-black`}>
+      <div className="bg-white max-xl:px-8 xl:w-[1270px] 2xl:w-[1350px] min-h-screen rounded-lg py-16 max-xl:pb-4 mt-[200px] sm:mt-[400px] xl:mt-[200px]">
+        <h1 className={`${amita.className} text-2xl md:text-4xl text-center text-black`}>
           Les lieux incontournables
         </h1>
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-1 xl:grid-cols-2 w-full">
           {locationsData.locations.map((location, index) => (
             <LocationDetails
               key={index}
               title={location.title}
               description={location.description}
+              description2={location.description2}
               photos={location.photos}
+              isReverse={index % 2 === 1}
             />
           ))}
         </div>

@@ -23,7 +23,7 @@ export default function LocationCard({
           {title}
         </h2>
         {isFavorite && (
-          <div className="text-[#243662] text-[10px] -mt-[36px] flex items-center italic max-lg:hidden">
+          <div className="text-[#243662] text-[12px] -mt-[36px] flex items-center italic max-lg:hidden">
             <Image
               src="/icons/heart.svg"
               alt="Coup de coeur"
@@ -34,7 +34,7 @@ export default function LocationCard({
             <span>Coup de coeur de l&apos;hôte</span>
           </div>
         )}
-        <p className="max-lg:hidden text-[12px]">{description}</p>
+        <p className="max-lg:hidden">{description}</p>
         <p className="lg:hidden text-[12px]">{description2}</p>
       </div>
       <Image
