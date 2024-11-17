@@ -64,20 +64,28 @@ export default function Home() {
         />
       </div>
 
-      <div className="mt-64 mb-12 h-min flex flex-col items-center">
-        <h1 className={`${amita.className} text-[64px] mb-2 text-white`}>
+      <div className="mt-64 mb-10 sm:mb-48 flex flex-col items-center">
+        <h1
+          className={`${amita.className} text-[38px] sm:text-[64px] mb-8 sm:mb-2 text-white`}
+        >
           - Tourisme -
         </h1>
-        <p className="text-white">
-          Les lieux et activités inoubliables du Studio Mazzetta
+        <p className="text-white max-md:hidden">
+          Les lieux et activités inoubliables autour du Studio Mazzetta
         </p>
+        <p className="text-white md:hidden">
+          Les lieux et activités inoubliables
+        </p>
+        <p className="text-white md:hidden">autour du Studio Mazzetta</p>
       </div>
-      <div className="w-screen overflow-scroll px-[200px]">
-        <div className="flex space-x-[50px] items-center w-min">
+
+      <div className="w-screen overflow-scroll px-7 md:px-[100px] xl:px-[200px]">
+        <div className="flex space-x-[25px] xl:space-x-[50px] items-center w-min">
           <LocationCard
             title="Porto-Vecchio"
             isFavorite={false}
-            description="La ville La villle La villle La villle La villle La villle La villle La villle La villle La villle."
+            description="Porto-Vecchio, joyau corse, entre mer et montagnes, célèbre pour ses plages de rêve et son centre historique."
+            description2="Ville corse, plages paradisiaques et centre historique enchanteur"
             imagePath="/IMG_landscape/PortoVecchioSansBg.png"
           />
           <div className="h-[80px] w-[4px] bg-[#243662]"></div>
@@ -85,6 +93,7 @@ export default function Home() {
             title="Bonifacio"
             isFavorite={true}
             description="Une cité perchée au sommet de falaises calcaires surplombant la mer méditerranée."
+            description2="Cité sur falaises calcaires, vue imprenable sur Méditerranée"
             imagePath="/IMG_landscape/BonifacioSansBg.png"
           />
           <div className="h-[80px] w-[4px] bg-[#243662]"></div>
@@ -92,6 +101,7 @@ export default function Home() {
             title="L'Ospedale"
             isFavorite={false}
             description="Un village situé dans la montagne avec un réservoir magnifique et des forêts."
+            description2="Village de montagne avec réservoir paisible et forêts denses"
             imagePath="/IMG_landscape/OspedaleSansBg.png"
           />
           <div className="h-[80px] w-[4px] bg-[#243662]"></div>
@@ -99,6 +109,7 @@ export default function Home() {
             title="Plateau du Cuscione"
             isFavorite={false}
             description="Des paysages vastes et des sentiers parfaits pour la randonnée et les amoureux de la nature."
+            description2="Paysages vastes, sentiers parfaits pour randonnées et nature sauvage"
             imagePath="/IMG_landscape/CuscionuSansBg.png"
           />
           <div className="h-[80px] w-[4px] bg-[#243662]"></div>
@@ -106,6 +117,7 @@ export default function Home() {
             title="Lion de Roccapina"
             isFavorite={false}
             description="Une formation rocheuse en forme de lion offrant des vues spectaculaires."
+            description2="Roche en forme de lion, vues majestueuses sur Méditerranée"
             imagePath="/IMG_landscape/RoccapinaSansBg.png"
           />
         </div>
@@ -132,7 +144,9 @@ export default function Home() {
         {categoriesOrdonnees.map((categorie: string) => (
           <div key={categorie} className="mt-12">
             <div className="bg-[#243662] w-min p-2">
-              <h2 className={`${amita.className} text-2xl text-white whitespace-nowrap`}>
+              <h2
+                className={`${amita.className} text-2xl text-white whitespace-nowrap`}
+              >
                 {categorie}
               </h2>
             </div>
