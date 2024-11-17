@@ -27,7 +27,7 @@ export default function ContactPage() {
                 Nous contacter
               </h1>
               <p className="text-lg text-[#243662] italic -mt-4 transition-all duration-500 ease-in-out">
-                Amélie et Eric
+                Amélie
               </p>
             </div>
             <div>

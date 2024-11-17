@@ -88,7 +88,7 @@ Chaque lieu vous promet des découvertes inoubliables."
       </div>
       <div className="bg-[#243662] w-full h-min py-[50px] mb-[175px] flex items-center justify-center">
         <CardQuote
-          title="Goncalves Amélie"
+          title="Lagny Amélie"
           subtitle="Propriétaire"
           quote="C’est le temps que tu as perdu pour ta rose qui fait ta rose si importante"
           phone="06 22 54 32 81"
