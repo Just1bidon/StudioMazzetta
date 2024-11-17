@@ -18,28 +18,27 @@ export default function CardInfos({
   barHeight,
 }: CardInfosProps) {
   const words = title.split(" ");
-  const contentRef = useRef<HTMLDivElement>(null); // Ref pour mesurer la hauteur
+  const contentRef = useRef<HTMLDivElement>(null);
   const [computedHeight, setComputedHeight] = useState<number>(0);
 
   useEffect(() => {
     if (contentRef.current) {
-      // On récupère la hauteur de la carte si aucune hauteur n'est passée
       setComputedHeight(contentRef.current.clientHeight);
     }
   }, []);
 
   return (
     <div
-      className="relative w-[1225px] p-[25px] px-[50px] flex gap-[50px]"
-      ref={contentRef} // Attacher le ref ici pour mesurer la hauteur
+      className="relative w-min xl:w-[1225px] py-[25px] px-6 xl:px-[50px] flex flex-col lg:flex-row gap-[20px] xl:gap-[50px]"
+      ref={contentRef}
     >
       <div
         className="absolute top-0 left-0 bg-[#243662] w-2 transform -translate-x-6 translate-y-2"
         style={{
-          height: `${barHeight ? barHeight : computedHeight}px`, // Hauteur par défaut ou personnalisée
+          height: `${barHeight ? barHeight : computedHeight}px`,
         }}
       ></div>
-      <div className="w-[460px]">
+      <div className="xl:w-[460px]">
         <h2 className={`${amita.className} text-black font-light text-3xl mb-4`}>
           {shouldHighlightFirstWord ? (
             <>
@@ -50,7 +49,7 @@ export default function CardInfos({
             title
           )}
         </h2>
-        <p className="text-black">{description}</p>
+        <p className="text-black w-full lg:w-[250px] xl:w-full">{description}</p>
       </div>
       <GridPhotos photos={photos} />
     </div>

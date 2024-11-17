@@ -171,12 +171,12 @@ export default function Home() {
               iconUrl={equipment.iconUrl}
               description={equipment.description}
               subDescription={equipment.subDescription}
-              align={index % 2 === 0 ? 'left' : 'right'}
+              align={index % 2 === 0 ? "left" : "right"}
             />
           ))}
         </div>
       </div>
-      <div className="flex flex-col items-center bg-white shadow-md w-[1225px] gap-[35px] py-[30px] rounded-[8px]">
+      <div className="flex flex-col items-center bg-white shadow-md w-min xl:w-[1225px] gap-[35px] py-[30px] rounded-[8px]">
         {/* Espace de vie */}
         <CardInfos
           title="Espace de vie"
@@ -185,7 +185,7 @@ export default function Home() {
           shouldHighlightFirstWord={true}
           barHeight={130}
         />
-        <div className="w-[593px] h-[3px] bg-[#243662]"></div>
+        <div className="w-1/2 md:w-[593px] h-[3px] bg-[#243662]"></div>
         {/* Cuisine */}
         <CardInfos
           title="Cuisine"
@@ -194,7 +194,7 @@ export default function Home() {
           shouldHighlightFirstWord={false}
           barHeight={200}
         />
-        <div className="w-[593px] h-[3px] bg-[#243662]"></div>
+        <div className="w-1/2 md:w-[593px] h-[3px] bg-[#243662]"></div>
 
         {/* Salle de bain */}
         <CardInfos
@@ -204,7 +204,7 @@ export default function Home() {
           shouldHighlightFirstWord={true}
           barHeight={110}
         />
-        <div className="w-[593px] h-[3px] bg-[#243662]"></div>
+        <div className="w-1/2 md:w-[593px] h-[3px] bg-[#243662]"></div>
 
         {/* Extérieur */}
         <CardInfos
@@ -214,7 +214,7 @@ export default function Home() {
           shouldHighlightFirstWord={false}
           barHeight={150}
         />
-        <div className="w-[593px] h-[3px] bg-[#243662]"></div>
+        <div className="w-1/2 md:w-[593px] h-[3px] bg-[#243662]"></div>
 
         {/* Espace chambre */}
         <CardInfos
@@ -226,10 +226,10 @@ export default function Home() {
         />
       </div>
       <div>
-        <h2 className={`${amita.className} text-3xl mb-6`}>
+        <h2 className={`${amita.className} text-[26px] sm:text-[32px] m-6 sm:mb-6`}>
           Informations supplémentaires
         </h2>
-        <div className="bg-white p-8 rounded-lg shadow-md max-w-[1225px] mx-auto">
+        <div className="bg-white p-2 sm:p-8 rounded-lg shadow-md max-w-[1225px] sm:m-4 xl:mx-auto">
           {items.map((item, index) => (
             <CheckItem key={index} text={item} />
           ))}
