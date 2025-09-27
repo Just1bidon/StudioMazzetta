@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
 import "@/ui/globals.css";
 import NavBar from "./component/Navbar";
 import { amiko } from "@/app/fonts";
 import Footer from "./component/Footer";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function RootLayout({
   children,
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const isContactPage = pathname === '/contact';
+  const isContactPage = pathname === "/contact";
   const footerValor = !isContactPage;
 
   return (
@@ -21,6 +22,7 @@ export default function RootLayout({
         <NavBar />
         <main className="flex-grow">{children}</main>
         <Footer valor={footerValor} />
+        <Analytics />
       </body>
     </html>
   );
