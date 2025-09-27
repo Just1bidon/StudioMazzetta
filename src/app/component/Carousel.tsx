@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 type CarouselProps = {
   photos: string[];
@@ -7,7 +7,11 @@ type CarouselProps = {
   closeCarousel: () => void;
 };
 
-export default function Carousel({ photos, currentIndex, closeCarousel }: CarouselProps) {
+export default function Carousel({
+  photos,
+  currentIndex,
+  closeCarousel,
+}: CarouselProps) {
   const [index, setIndex] = useState(currentIndex);
 
   const goToNext = useCallback(() => {
@@ -24,19 +28,19 @@ export default function Carousel({ photos, currentIndex, closeCarousel }: Carous
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'ArrowRight') {
+      if (event.key === "ArrowRight") {
         goToNext();
-      } else if (event.key === 'ArrowLeft') {
+      } else if (event.key === "ArrowLeft") {
         goToPrev();
-      } else if (event.key === 'Escape') {
+      } else if (event.key === "Escape") {
         closeCarousel();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [closeCarousel, goToNext, goToPrev]);
 

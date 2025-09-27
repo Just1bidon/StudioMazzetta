@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Carousel from './Carousel';
+import React, { useState } from "react";
+import Image from "next/image";
+import Carousel from "./Carousel";
 
 type PhotoGroupProps = {
   photos: string[];
@@ -46,7 +46,10 @@ export default function PhotoGroup({ photos, layout }: PhotoGroupProps) {
             />
           </div>
           {limitedPhotos.slice(1, 4).map((photo, index) => (
-            <div key={index + 1} className="relative w-full h-[150px] md:h-[200px] lg:h-[250px]">
+            <div
+              key={index + 1}
+              className="relative w-full h-[150px] md:h-[200px] lg:h-[250px]"
+            >
               <Image
                 src={photo}
                 alt={`Photo ${index + 2}`}
@@ -57,7 +60,10 @@ export default function PhotoGroup({ photos, layout }: PhotoGroupProps) {
             </div>
           ))}
           {limitedPhotos.slice(4).map((photo, index) => (
-            <div key={index + 4} className="relative w-full h-[150px] md:h-[200px] lg:h-[250px]">
+            <div
+              key={index + 4}
+              className="relative w-full h-[150px] md:h-[200px] lg:h-[250px]"
+            >
               <Image
                 src={photo}
                 alt={`Photo ${index + 5}`}
@@ -71,7 +77,7 @@ export default function PhotoGroup({ photos, layout }: PhotoGroupProps) {
       )}
 
       {/* Layouts 2 et 3 restent inchangés, à adapter si besoin */}
-      
+
       {showCarousel && (
         <Carousel
           photos={photos}
