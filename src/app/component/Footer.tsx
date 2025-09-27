@@ -31,7 +31,7 @@ export default function Footer({ valor }: CardProps) {
       {/* Social Media */}
       <div className="flex gap-[20px] items-end">
         {/* Instagram */}
-        <div
+        {/* <div
           className="w-[25px] h-[25px] cursor-pointer"
           onMouseEnter={() => setIsInstaHovered(true)}
           onMouseLeave={() => setIsInstaHovered(false)}
@@ -49,7 +49,7 @@ export default function Footer({ valor }: CardProps) {
             height={25}
             alt="Lien vers le instagram du Studio Mazzetta"
           />
-        </div>
+        </div> */}
         {/* AirBnb */}
         <div
           className="w-[25px] h-[25px] cursor-pointer"

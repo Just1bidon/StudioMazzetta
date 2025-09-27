@@ -35,11 +35,17 @@ export default function CardInfos({
       <div
         className="absolute top-0 left-0 bg-[#243662] w-2 transform -translate-x-6 translate-y-2"
         style={{
-          height: `${barHeight ? barHeight : computedHeight}px`,
+          height: barHeight
+            ? barHeight
+            : computedHeight
+            ? `${computedHeight}px`
+            : "auto",
         }}
       ></div>
       <div className="xl:w-[460px]">
-        <h2 className={`${amita.className} text-black font-light text-3xl mb-4`}>
+        <h2
+          className={`${amita.className} text-black font-light text-3xl mb-4`}
+        >
           {shouldHighlightFirstWord ? (
             <>
               <span className="bg-[#243662] text-white p-1">{words[0]}</span>{" "}
@@ -49,7 +55,9 @@ export default function CardInfos({
             title
           )}
         </h2>
-        <p className="text-black w-full lg:w-[250px] xl:w-full">{description}</p>
+        <p className="text-black w-full lg:w-[250px] xl:w-full">
+          {description}
+        </p>
       </div>
       <GridPhotos photos={photos} />
     </div>
