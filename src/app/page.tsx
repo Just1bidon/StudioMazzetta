@@ -61,7 +61,7 @@ Les plages de Santa Giulia et Palombaggia sont accessibles en quelques minutes e
         />
         <div className="w-[80px] h-[4px] bg-[#243662]"></div>
         <CardLarge
-          title="Le toursime"
+          title="Le tourisme"
           imageUrl="/PlageToursimeCard.png"
           description="Lors de votre séjour à Porto-Vecchio, profitez d'une multitude d'activités pour tous les goûts. Savourez un moment convivial dans les divers cafés et bars locaux, ou profitez d'une séance de cinéma au Complexe Galaxy. Explorez la mer avec des croisières offrant des vues imprenables sur les côtes corses. Pour les amateurs de nature, des randonnées équestres à travers des paysages magnifiques sont disponibles. Les restaurants locaux, tels que Da Rocca et Le Bellagio, vous régaleront avec leurs spécialités corses.
 Les amateurs de sensations peuvent essayer le jet ski ou faire un tour en hélicoptère.
