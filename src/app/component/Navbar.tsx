@@ -31,7 +31,7 @@ export default function NavBar() {
           <button>Appartement</button>
         </Link>
         <Link href={"/tourism"}>
-          <button>Toursime</button>
+          <button>Tourisme</button>
         </Link>
         <Link href={"/contact"}>
           <button>Contact</button>
