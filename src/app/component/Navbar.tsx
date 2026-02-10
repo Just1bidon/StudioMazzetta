@@ -62,7 +62,7 @@ export default function NavBar() {
             </Link>
             <Link href={"/tourism"}>
               <button className="py-2" onClick={toggleMenu}>
-                Toursime
+                Tourisme
               </button>
             </Link>
             <Link href={"/contact"}>
