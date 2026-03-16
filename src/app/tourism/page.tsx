@@ -7,7 +7,6 @@ import activities from "../../data/activites.json";
 import ActiviteCard from "../component/ActiviteCard";
 
 interface Activite {
-  categorie: string;
   nom: string;
   description: string;
   photo: string;
@@ -18,39 +17,13 @@ interface Activite {
   };
 }
 
-interface ActivitesParCategorie {
-  [key: string]: Activite[];
+interface CategorieActivites {
+  nom: string;
+  activites: Activite[];
 }
 
 export default function Home() {
-  const categoriesOrder = [
-    "Restaurant",
-    "Café / Bar",
-    "Cinéma",
-    "Croisière",
-    "Sensations",
-    "Équitation",
-    "Snorkeling",
-    "Office de Tourisme",
-  ];
-
-  // Grouper les activités par catégorie
-  const activitesParCategorie: ActivitesParCategorie =
-    activities.activites.reduce(
-      (acc: ActivitesParCategorie, activite: Activite) => {
-        if (!acc[activite.categorie]) {
-          acc[activite.categorie] = [];
-        }
-        acc[activite.categorie].push(activite);
-        return acc;
-      },
-      {}
-    );
-
-  // Ordonner les catégories selon l'ordre spécifié
-  const categoriesOrdonnees = categoriesOrder.filter(
-    (categorie: string) => activitesParCategorie[categorie]
-  );
+  const categories = activities.categories as CategorieActivites[];
 
   return (
     <main className="flex flex-col items-center min-h-screen">
@@ -143,20 +116,22 @@ export default function Home() {
         <h1 className={`${amita.className} text-4xl text-center text-black`}>
           Les activités
         </h1>
-        {categoriesOrdonnees.map((categorie: string) => (
-          <div key={categorie} className="mt-12">
-            <div className="bg-[#243662] w-min p-2">
-              <h2
-                className={`${amita.className} text-2xl text-white whitespace-nowrap`}
-              >
-                {categorie}
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 p-4">
-              {activitesParCategorie[categorie].map(
-                (activite: Activite, index: number) => (
+        {categories.map((categorie) => {
+          const placeholders = (5 - (categorie.activites.length % 5)) % 5;
+
+          return (
+            <div key={categorie.nom} className="mt-12">
+              <div className="bg-[#243662] w-min p-2">
+                <h2
+                  className={`${amita.className} text-2xl text-white whitespace-nowrap`}
+                >
+                  {categorie.nom}
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 p-4">
+                {categorie.activites.map((activite: Activite, index: number) => (
                   <ActiviteCard
-                    key={index}
+                    key={`${categorie.nom}-${activite.nom}-${index}`}
                     url={activite.photo}
                     nom={activite.nom}
                     description={activite.description}
@@ -164,20 +139,19 @@ export default function Home() {
                     facebook={activite.urls?.facebook}
                     website={activite.urls?.website}
                   />
-                )
-              )}
-              {/* Ajouter des éléments placeholder pour remplir la ligne si nécessaire */}
-              {Array.from({
-                length: 5 - (activitesParCategorie[categorie].length % 5),
-              }).map((_, i: number) => (
-                <div key={`placeholder-${i}`} className="h-0"></div>
-              ))}
+                ))}
+                {/* Ajouter des éléments placeholder pour remplir la ligne si nécessaire */}
+                {Array.from({ length: placeholders }).map((_, i: number) => (
+                  <div
+                    key={`${categorie.nom}-placeholder-${i}`}
+                    className="h-0"
+                  ></div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </main>
   );
 }
-
-// test branch
