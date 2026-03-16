@@ -22,6 +22,10 @@ interface CategorieActivites {
   activites: Activite[];
 }
 
+function getPlaceholderCount(itemsCount: number, columns: number) {
+  return (columns - (itemsCount % columns)) % columns;
+}
+
 export default function Home() {
   const categories = activities.categories as CategorieActivites[];
 
@@ -117,7 +121,18 @@ export default function Home() {
           Les activités
         </h1>
         {categories.map((categorie) => {
-          const placeholders = (5 - (categorie.activites.length % 5)) % 5;
+          const placeholdersSm = getPlaceholderCount(
+            categorie.activites.length,
+            2
+          );
+          const placeholdersLg = getPlaceholderCount(
+            categorie.activites.length,
+            3
+          );
+          const placeholders2xl = getPlaceholderCount(
+            categorie.activites.length,
+            5
+          );
 
           return (
             <div key={categorie.nom} className="mt-10 sm:mt-12">
@@ -140,11 +155,22 @@ export default function Home() {
                     website={activite.urls?.website}
                   />
                 ))}
-                {/* Ajouter des éléments placeholder pour remplir la ligne si nécessaire */}
-                {Array.from({ length: placeholders }).map((_, i: number) => (
+                {Array.from({ length: placeholdersSm }).map((_, i: number) => (
                   <div
-                    key={`${categorie.nom}-placeholder-${i}`}
-                    className="hidden 2xl:block h-0"
+                    key={`${categorie.nom}-placeholder-sm-${i}`}
+                    className="hidden h-0 sm:block lg:hidden"
+                  ></div>
+                ))}
+                {Array.from({ length: placeholdersLg }).map((_, i: number) => (
+                  <div
+                    key={`${categorie.nom}-placeholder-lg-${i}`}
+                    className="hidden h-0 lg:block 2xl:hidden"
+                  ></div>
+                ))}
+                {Array.from({ length: placeholders2xl }).map((_, i: number) => (
+                  <div
+                    key={`${categorie.nom}-placeholder-2xl-${i}`}
+                    className="hidden h-0 2xl:block"
                   ></div>
                 ))}
               </div>
