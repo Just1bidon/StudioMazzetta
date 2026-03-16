@@ -112,23 +112,23 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="w-full max-w-[1350px] min-h-screen py-16 mt-[200px]">
-        <h1 className={`${amita.className} text-4xl text-center text-black`}>
+      <div className="w-full max-w-[1350px] min-h-screen px-4 sm:px-6 xl:px-0 py-12 sm:py-16 mt-20 sm:mt-[140px] xl:mt-[200px]">
+        <h1 className={`${amita.className} text-[34px] sm:text-4xl text-center text-black`}>
           Les activités
         </h1>
         {categories.map((categorie) => {
           const placeholders = (5 - (categorie.activites.length % 5)) % 5;
 
           return (
-            <div key={categorie.nom} className="mt-12">
-              <div className="bg-[#243662] w-min p-2">
+            <div key={categorie.nom} className="mt-10 sm:mt-12">
+              <div className="bg-[#243662] w-min max-w-full px-3 py-2 sm:p-2">
                 <h2
-                  className={`${amita.className} text-2xl text-white whitespace-nowrap`}
+                  className={`${amita.className} text-[20px] sm:text-2xl text-white whitespace-nowrap`}
                 >
                   {categorie.nom}
                 </h2>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 p-4">
+              <div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-5 sm:gap-4 px-0 py-5 sm:p-4">
                 {categorie.activites.map((activite: Activite, index: number) => (
                   <ActiviteCard
                     key={`${categorie.nom}-${activite.nom}-${index}`}
@@ -144,7 +144,7 @@ export default function Home() {
                 {Array.from({ length: placeholders }).map((_, i: number) => (
                   <div
                     key={`${categorie.nom}-placeholder-${i}`}
-                    className="h-0"
+                    className="hidden xl:block h-0"
                   ></div>
                 ))}
               </div>
