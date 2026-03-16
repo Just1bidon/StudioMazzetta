@@ -112,7 +112,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="w-full max-w-[1350px] min-h-screen px-4 sm:px-6 xl:px-0 py-12 sm:py-16 mt-20 sm:mt-[140px] xl:mt-[200px]">
+      <div className="w-full max-w-[1350px] min-h-screen px-4 sm:px-6 lg:px-10 xl:px-12 2xl:px-0 py-12 sm:py-16 mt-20 sm:mt-[140px] xl:mt-[200px]">
         <h1 className={`${amita.className} text-[34px] sm:text-4xl text-center text-black`}>
           Les activités
         </h1>
@@ -128,7 +128,7 @@ export default function Home() {
                   {categorie.nom}
                 </h2>
               </div>
-              <div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-5 sm:gap-4 px-0 py-5 sm:p-4">
+              <div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-5 sm:gap-4 px-0 py-5 sm:px-2 sm:py-4 lg:px-3 xl:px-0 xl:py-4">
                 {categorie.activites.map((activite: Activite, index: number) => (
                   <ActiviteCard
                     key={`${categorie.nom}-${activite.nom}-${index}`}
@@ -144,7 +144,7 @@ export default function Home() {
                 {Array.from({ length: placeholders }).map((_, i: number) => (
                   <div
                     key={`${categorie.nom}-placeholder-${i}`}
-                    className="hidden xl:block h-0"
+                    className="hidden 2xl:block h-0"
                   ></div>
                 ))}
               </div>
