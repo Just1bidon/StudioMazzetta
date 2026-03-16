@@ -23,7 +23,7 @@ export default function Home() {
         >
           - Studio Mazzetta -
         </h1>
-        <p className="text-white">Le studio pour un été inoubliable en corse</p>
+        <p className="text-white">Le studio pour votre été en corse</p>
       </div>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row justify-between items-center gap-4">
         <CardSmall
