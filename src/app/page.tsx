@@ -29,19 +29,19 @@ export default function Home() {
         <CardSmall
           title="Gastronomie"
           imageUrl="/Gastronomie.png"
-          description="Savourez les spécialités locales de Porto-Vecchio dans nos restaurants et cafés. Dégustez des produits frais de la mer, des fromages corses, des charcuteries et des vins locaux. Chaque repas est une invitation à découvrir les saveurs uniques de la Corse."
+          description={`Savourez Porto-Vecchio à travers ses tables ensoleillées, ses produits de la mer et ses spécialités corses.\n\nEntre vins du terroir, charcuteries et adresses conviviales, chaque repas devient un vrai moment de vacances`}
         />
         <div className="max-lg:hidden w-[28px] xl:w-[40px] h-[4px] bg-[#243662]"></div>
         <CardSmall
           title="Culture"
           imageUrl="/Culture.png"
-          description="Explorez le riche patrimoine culturel de Porto-Vecchio et ses environs. Visitez la vieille ville, ses fortifications historiques, et découvrez l'histoire fascinante de la région. Participez aux événements et festivals locaux pour une immersion totale dans la culture corse."
+          description={`Flânez dans la vieille ville, découvrez les fortifications et laissez-vous porter par l’âme de Porto-Vecchio.\n\nConcerts, événements et patrimoine local rythment un séjour plus vivant et plus authentique`}
         />
         <div className="max-lg:hidden w-[28px] xl:w-[40px] h-[4px] bg-[#243662]"></div>
         <CardSmall
           title="Bien être"
           imageUrl="/Bien_etre.png"
-          description="Profitez d'un moment de détente et de bien-être pendant votre séjour. Découvrez les spas et centres de bien-être de Porto-Vecchio, offrant des massages relaxants, des soins du corps et des moments de relaxation. Laissez-vous choyer dans un cadre idyllique, loin du stress quotidien."
+          description={`Offrez-vous une parenthèse douceur entre spa, massage et instants de détente face aux paysages corses.\n\nL’occasion parfaite de ralentir, respirer et profiter pleinement du séjour`}
         />
       </div>
 
