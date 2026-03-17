@@ -16,7 +16,7 @@ export default function ContactPage() {
       {/* Fond blanc incliné */}
       <div className="absolute -z-5 bg-[#F8F9FC] w-[50px] lg:w-[200px] h-[1500px] lg:h-screen top-0 rotate-90 lg:rotate-3 left-[33%] azerty:left-[38%] -translate-y-44 lg:translate-y-0 transition-all duration-500 ease-in-out"></div>
 
-      <div className="relative flex flex-col items-center px-7 pt-28 sm:p-16">
+      <div className="relative flex flex-col items-center px-7 pt-16 sm:p-16">
         <div className="w-full lg:w-[1225px] max-w-6xl lg:flex justify-center items-center gap-[40px] azerty:gap-[200px] transition-all duration-500 ease-in-out">
           {/* Informations de contact */}
           <div className="flex flex-col items-start space-y-6 text-[#243662] w-full lg:w-1/2 transition-all duration-500 ease-in-out">
