@@ -22,27 +22,54 @@ export default function CardLarge({
   external,
   reverse = false,
 }: CardProps) {
+  const mobileParagraphs = (description2 ?? "")
+    .split("\n\n")
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
+  const desktopParagraphs = description
+    .split("\n\n")
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
   return (
     <section
-      className={`overflow-hidden w-full xl:w-[1225px] h-min rounded-xl xl:rounded-none flex flex-col-reverse xl:flex-row justify-between items-center xl:gap-[15px] ${
-        reverse && "xl:flex-row-reverse"
+      className={`w-full xl:w-[1225px] rounded-xl bg-white shadow-md overflow-hidden flex flex-col-reverse items-center lg:min-h-[430px] lg:flex-row lg:items-stretch lg:gap-[15px] lg:rounded-none lg:bg-transparent lg:shadow-none ${
+        reverse && "lg:flex-row-reverse"
       }`}
     >
       {/* Texte */}
-      <div className="xl:w-[560px] h-full bg-white xl:rounded-xl xl:shadow-md p-4 md:p-8 flex flex-col items-center">
+      <div className="w-full bg-white p-4 md:p-8 flex flex-col items-center lg:w-[560px] lg:h-auto lg:rounded-xl lg:shadow-md">
         <h2 className="font-serif text-3xl mb-4 w-full">{title}</h2>
-        <p className="mb-4 leading-[20px] block md:hidden">{description2}</p>
-        <p className="mb-4 leading-[20px] hidden md:block">{description}</p>
-        <Button label={buttonLabel} url={buttonUrl} external={external} />
+
+        <div className="w-full flex flex-col gap-4 text-left lg:hidden">
+          {mobileParagraphs.map((paragraph, index) => (
+            <p key={`${title}-mobile-${index}`} className="leading-[20px]">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+
+        <div className="hidden w-full flex-col gap-5 text-left lg:flex">
+          {desktopParagraphs.map((paragraph, index) => (
+            <p key={`${title}-desktop-${index}`} className="leading-[24px]">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+
+        <div className="mt-6 lg:mt-auto">
+          <Button label={buttonLabel} url={buttonUrl} external={external} />
+        </div>
       </div>
+
       {/* Image */}
-      <div className="w-full xl:w-[650px] h-[400px] xl:h-full xl:rounded-xl overflow-hidden flex justify-center">
+      <div className="relative w-full h-[400px] overflow-hidden lg:w-[650px] lg:h-auto lg:flex-1 lg:rounded-xl">
         <Image
           src={imageUrl}
           alt={title}
-          width={650}
-          height={400}
-          layout="responsive"
+          fill
+          sizes="(max-width: 1023px) 100vw, 650px"
           className="object-cover"
         />
       </div>

@@ -49,11 +49,8 @@ export default function Home() {
         <CardLarge
           title="L’appartement"
           imageUrl="/IMG_appart/IMG_3664.jpg"
-          description="Découvrez ce charmant studio de 32m², classé 3 étoiles, situé à seulement 1km du centre-ville de Porto-Vecchio. Construit en décembre 2021, il offre une vue magnifique sur la montagne. 
-Le logement dispose d'une pièce à vivre lumineuse avec un canapé convertible de haute qualité, une cuisine ouverte entièrement équipée, et une salle de bain moderne avec cabine de douche et lave-linge. Vous pourrez également profiter d'une grande terrasse-loggia de 36m² aménagée avec une table, des chaises, un barbecue et des transats. 
-Pour votre confort, le studio est équipé d'une connexion Wifi, d'une TV HD avec Netflix, d'une climatisation réversible, et d'un espace de travail dédié. Une place de stationnement est disponible dans un garage sécurisé. 
-Les plages de Santa Giulia et Palombaggia sont accessibles en quelques minutes en voiture. Les draps et le linge de maison sont fournis."
-          description2="Studio de 32m², classé 3 étoiles, à 1km du centre de Porto-Vecchio, construit en décembre 2021 avec vue sur la montagne. Pièce à vivre lumineuse avec canapé convertible, cuisine équipée, salle de bain moderne avec lave-linge. Terrasse-loggia de 36m² avec mobilier et barbecue. Wifi, TV HD avec Netflix, climatisation, espace de travail, et garage sécurisé. Plages de Santa Giulia et Palombaggia à proximité. Draps et linge fournis."
+          description={`Un studio 3 étoiles de 32 m², à seulement 1 km du centre de Porto-Vecchio, pensé pour un séjour simple, élégant et confortable.\n\nProfitez d'une pièce de vie lumineuse, d'une cuisine ouverte toute équipée, d'une salle de bain moderne et d'une grande terrasse de 36 m² pour vos apéritifs et vos soirées d'été.\n\nWifi, Netflix, climatisation réversible, espace de travail et garage sécurisé complètent l'expérience, avec Santa Giulia et Palombaggia à quelques minutes seulement.`}
+          description2={`Un studio 3 étoiles à 1 km du centre de Porto-Vecchio, avec vue montagne et ambiance soignée.\n\nGrande terrasse-loggia, cuisine équipée, climatisation, Wifi et plages mythiques à quelques minutes.`}
           buttonLabel="Voir"
           buttonUrl="/apartement"
           external={false}
@@ -63,10 +60,8 @@ Les plages de Santa Giulia et Palombaggia sont accessibles en quelques minutes e
         <CardLarge
           title="Le tourisme"
           imageUrl="/PlageToursimeCard.png"
-          description="Lors de votre séjour à Porto-Vecchio, profitez d'une multitude d'activités pour tous les goûts. Savourez un moment convivial dans les divers cafés et bars locaux, ou profitez d'une séance de cinéma au Complexe Galaxy. Explorez la mer avec des croisières offrant des vues imprenables sur les côtes corses. Pour les amateurs de nature, des randonnées équestres à travers des paysages magnifiques sont disponibles. Les restaurants locaux, tels que Da Rocca et Le Bellagio, vous régaleront avec leurs spécialités corses.
-Les amateurs de sensations peuvent essayer le jet ski ou faire un tour en hélicoptère.
-Découvrez également les magnifiques plages de Santa Giulia et Palombaggia, réputées pour leur sable fin et leurs eaux cristallines, idéales pour la baignade et le snorkeling."
-          description2="À Porto-Vecchio, profitez de cafés, bars, et du cinéma Galaxy. Explorez les côtes corses en croisière, faites des randonnées équestres, ou savourez la cuisine locale chez Da Rocca et Le Bellagio. Pour les sensations fortes, essayez le jet ski ou un tour en hélicoptère. Les plages de Santa Giulia et Palombaggia vous attendent pour la baignade et le snorkeling."
+          description={`Autour de Porto-Vecchio, chaque journée peut changer de rythme : plages iconiques, bonnes adresses, sorties en mer et activités pour tous les styles de séjour.\n\nOffrez-vous un déjeuner en terrasse, une croisière sur les côtes corses, une parenthèse nature à cheval ou une dose d'adrénaline en jet ski.\n\nEntre Santa Giulia, Palombaggia et les meilleures tables locales, tout est réuni pour un séjour vivant, solaire et mémorable.`}
+          description2={`À Porto-Vecchio, alternez plages de rêve, sorties en mer, bonnes tables et activités nature.\n\nSanta Giulia, Palombaggia et les meilleures adresses locales vous attendent à quelques minutes.`}
           buttonLabel="Voir"
           buttonUrl="/tourism"
           external={false}
@@ -76,10 +71,8 @@ Découvrez également les magnifiques plages de Santa Giulia et Palombaggia, ré
         <CardLarge
           title="Les paysages"
           imageUrl="/IMG_landscape/Porto-Vecchio/PortoVecchio6.jpeg"
-          description="Découvrez les merveilles de la région autour de Porto-Vecchio. Commencez par Bonifacio, connue pour ses falaises de calcaire blanc et ses vues spectaculaires sur la Méditerranée. Ensuite, explorez le Lion de Roccapina, une formation rocheuse unique en forme de lion couché. Pour une escapade en montagne, rendez-vous à Ospedale avec ses forêts de pins et son lac enchanteur.
-Le plateau du Cuscionu offre des prairies verdoyantes et des panoramas à couper le souffle. Porto-Vecchio elle-même séduit par ses plages de sable fin et son centre-ville animé. Enfin, ne manquez pas Saint-Lucie de      Porto-Vecchio, avec ses plages idylliques comme Pinarellu.
-Chaque lieu vous promet des découvertes inoubliables."
-          description2="Explorez les merveilles autour de Porto-Vecchio : Bonifacio et ses falaises, le Lion de Roccapina, Ospedale et ses forêts, le plateau du Cuscionu, et Saint-Lucie de Porto-Vecchio avec Pinarellu. Plages, nature et panoramas à couper le souffle vous attendent."
+          description={`Autour de Porto-Vecchio, la Corse du Sud dévoile des décors spectaculaires entre mer turquoise, reliefs sauvages et villages de caractère.\n\nAdmirez les falaises de Bonifacio, le Lion de Roccapina, les forêts de l'Ospedale et les grands panoramas du plateau du Cuscionu.\n\nAjoutez Saint-Lucie, Pinarellu et les plus belles plages du secteur, et vous obtenez un terrain de découvertes aussi apaisant qu'impressionnant.`}
+          description2={`Entre Bonifacio, Roccapina, l'Ospedale, le Cuscionu et Saint-Lucie, les plus beaux paysages du sud se découvrent tout autour de Porto-Vecchio.\n\nMer, montagne et plages iconiques composent un décor inoubliable.`}
           buttonLabel="Voir"
           buttonUrl="/tourism"
           external={false}
