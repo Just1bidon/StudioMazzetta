@@ -102,10 +102,22 @@ export default function Home() {
       jour de votre arrivée.
     </>,
     <>
-      <strong>Véhicule</strong> recommandé, mais possibilité de rayonner à pied
-      ou en <strong>navette</strong> électrique et <strong>gratuite</strong>{" "}
-      dans le cœur de ville de <strong>Porto-Vecchio</strong>, le port de
-      plaisance et la partie basse de la ville.
+      Un véhicule est recommandé pour les visites hors secteur urbain, mais
+      vous avez la possibilité de vous déplacer au sein du secteur urbain de
+      Porto-Vecchio grâce à la navette électrique et gratuite{" "}
+      <strong>&quot;A Citadina&quot;</strong>, dont l&apos;arrêt se situe à
+      quelques mètres de la résidence en vous rendant à l&apos;arrêt{" "}
+      <strong>&quot;A Stabiacciu&quot;</strong> et la ligne{" "}
+      <strong>&quot;Marina&quot;</strong>.
+      <br />
+      <br />
+      Grâce à l&apos;application <strong>Pysaé</strong>, vous suivrez en temps
+      réel les rotations de chaque navette qui vous permettront de vous
+      déplacer sur l&apos;ensemble de Porto-Vecchio.
+      <br />
+      <br />
+      L&apos;entrée du cœur de ville se situe à environ <strong>600 m</strong>{" "}
+      de la résidence, et le cœur de ville à <strong>1 km</strong>.
     </>,
     <>
       À votre disposition : étendoir à linge, aspirateur balai, glacière, pains
@@ -117,12 +129,8 @@ export default function Home() {
       séjour.
     </>,
     <>
-      Puis un <strong>sac de plage</strong> contenant 2 serviettes et un
-      parasol.
-    </>,
-    <>
-      Prestation Optionnelle : (sur pre-réservation à régler sur place 10€){" "}
-      <strong>2 masques Easybreath</strong>.
+      Puis un <strong>sac de plage</strong> contenant 2 serviettes, un parasol
+      et <strong>2 masques Easybreath</strong>.
     </>,
   ];
 
