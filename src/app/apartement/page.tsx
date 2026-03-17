@@ -110,12 +110,11 @@ export default function Home() {
       <strong>&quot;A Stabiacciu&quot;</strong> et la ligne{" "}
       <strong>&quot;Marina&quot;</strong>.
       <br />
-      <br />
       Grâce à l&apos;application <strong>Pysaé</strong>, vous suivrez en temps
       réel les rotations de chaque navette qui vous permettront de vous
       déplacer sur l&apos;ensemble de Porto-Vecchio.
-      <br />
-      <br />
+    </>,
+    <>
       L&apos;entrée du cœur de ville se situe à environ <strong>600 m</strong>{" "}
       de la résidence, et le cœur de ville à <strong>1 km</strong>.
     </>,
