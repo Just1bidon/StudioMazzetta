@@ -9,7 +9,7 @@ import ActiviteCard from "../component/ActiviteCard";
 interface Activite {
   nom: string;
   description: string;
-  photo: string;
+  photo?: string;
   urls?: {
     instagram?: string;
     facebook?: string;
@@ -147,7 +147,7 @@ export default function Home() {
                 {categorie.activites.map((activite: Activite, index: number) => (
                   <ActiviteCard
                     key={`${categorie.nom}-${activite.nom}-${index}`}
-                    url={activite.photo}
+                    url={activite.photo ?? "/PlageToursimeCard.png"}
                     nom={activite.nom}
                     description={activite.description}
                     instagram={activite.urls?.instagram}

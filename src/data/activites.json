@@ -59,6 +59,16 @@
             "instagram": "https://www.instagram.com/upaviddonu/"
           },
           "photo": "/IMG_activite/u_paviddonu.png"
+        },
+        {
+          "nom": "Domaine de Peretti della Rocca",
+          "description": "Dégustation de vins",
+          "urls": {
+            "instagram": "https://www.instagram.com/domainedeperettidellarocca?igsh=ZGk4d3o0ZGt1ZGV3",
+            "facebook": "https://www.facebook.com/share/18SgDtAgqy/?mibextid=wwXIfr",
+            "website": "https://www.deperettidellarocca.com/"
+          },
+          "photo": "/IMG_activite/domaine_de_peretti_della_rocca.jpg"
         }
       ]
     },
@@ -101,6 +111,15 @@
             "website": "https://www.galeriedesducs.fr/"
           },
           "photo": "/IMG_activite/bar_des_ducs.png"
+        },
+        {
+          "nom": "Domaine Costa Rossa",
+          "description": "Dégustations de vin, tapas et terroir",
+          "urls": {
+            "instagram": "https://www.instagram.com/domainecostarossa?igsh=cXA3cThtMnl3NmF6",
+            "facebook": "https://www.facebook.com/share/14Y22SnNazk/?mibextid=wwXIfr"
+          },
+          "photo": "/IMG_activite/domaine_costa_rossa.jpg"
         }
       ]
     },
@@ -227,6 +246,31 @@
             "website": "https://g.co/kgs/m4MhTgu"
           },
           "photo": "/IMG_activite/ines_cluset.png"
+        }
+      ]
+    },
+    {
+      "nom": "Visites",
+      "activites": [
+        {
+          "nom": "U Porcu Ranger",
+          "description": "Visite d'élevage de porcs corses",
+          "urls": {
+            "instagram": "https://www.instagram.com/uporcuranger?igsh=MThobW9kYjRhM3ZtYg==",
+            "facebook": "https://www.facebook.com/share/1CcVLqxoAN/?mibextid=wwXIfr",
+            "website": "https://uporcuranger.com/"
+          },
+          "photo": "/IMG_activite/u_porcu_ranger.jpg"
+        },
+        {
+          "nom": "Bains de Caldane",
+          "description": "Source d'eau chaude thermale",
+          "urls": {
+            "instagram": "https://www.instagram.com/domainerosadecaldane?igsh=MW8xM2c4eXhlaG12dg==",
+            "facebook": "https://www.facebook.com/share/14YgLNi9N3k/?mibextid=wwXIfr",
+            "website": "https://www.hotelresidence-caldane.com/"
+          },
+          "photo": "/IMG_activite/rosa_de_caldane.JPG"
         }
       ]
     },

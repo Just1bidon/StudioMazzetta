@@ -19,14 +19,14 @@ export default function ActiviteCard({
   website,
 }: ActiviteCardProps) {
   return (
-    <div className="bg-white w-full max-w-[360px] sm:w-[239px] sm:max-w-none sm:h-[316px] overflow-hidden rounded-lg shadow-lg">
+    <div className="bg-white w-full max-w-[360px] sm:w-[256px] sm:max-w-none sm:h-[316px] overflow-hidden rounded-lg shadow-lg">
       {/* Image Section */}
       <div className="relative w-full aspect-[239/141] sm:h-[141px] sm:aspect-auto overflow-hidden">
         <Image
           src={url}
           alt={nom}
           fill
-          sizes="(max-width: 640px) 100vw, 239px"
+          sizes="(max-width: 640px) 100vw, 256px"
           className="object-cover rounded-t-lg"
         />
       </div>
@@ -34,7 +34,7 @@ export default function ActiviteCard({
       <div className="px-3 pb-5 sm:px-0 sm:pb-0">
         {/* Name and Description Section */}
         <div className="text-center mt-4">
-          <h2 className={`${amita.className} text-[20px] font-semibold`}>
+          <h2 className={`${amita.className} text-[20px] font-semibold line-clamp-1`}>
             {nom}
           </h2>
           <p className="text-sm text-[#243762]">{description}</p>
